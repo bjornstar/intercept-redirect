@@ -1,0 +1,22 @@
+{
+	"background": {
+		"scripts": [ "background.js" ]
+	},
+	"manifest_version": 2,
+	"name": "Intercept Redirect",
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"https://exit.sc/",
+		"https://l.facebook.com/",
+		"https://www.google.com/",
+		"https://l.instagram.com/",
+		"https://l.messenger.com/",
+		"https://slack-redir.net/",
+		"https://steamcommunity.com/",
+		"https://t.umblr.com/",
+		"https://vk.com/",
+		"https://www.youtube.com/"
+	],
+	"version": "1.0.0"
+}
