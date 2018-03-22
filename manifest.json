@@ -9,6 +9,7 @@
 		"webRequestBlocking",
 		"https://exit.sc/",
 		"https://l.facebook.com/",
+		"https://plus.url.google.com/",
 		"https://www.google.com/",
 		"https://l.instagram.com/",
 		"https://l.messenger.com/",
@@ -18,5 +19,5 @@
 		"https://vk.com/",
 		"https://www.youtube.com/"
 	],
-	"version": "1.0.0"
+	"version": "1.1.0"
 }

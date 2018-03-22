@@ -5,6 +5,9 @@ const sites = {
   'l.facebook.com': function (q) {
     return q.u;
   },
+  'plus.url.google.com': function (q) {
+    return q.url;
+  },
   'www.google.com': function (q) {
     return q.url;
   },
@@ -34,6 +37,7 @@ const sites = {
 const urls = [
   'https://exit.sc/*',
   'https://l.facebook.com/l.php*',
+  'https://plus.url.google.com/url*',
   'https://www.google.com/url*',
   'https://l.instagram.com/*',
   'https://l.messenger.com/l.php*',
