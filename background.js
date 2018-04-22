@@ -1,55 +1,58 @@
 const sites = {
-  'exit.sc': function (q) {
-    return q.url;
+  'exit.sc': {
+    pathname: '',
+    key: 'url'
   },
-  'l.facebook.com': function (q) {
-    return q.u;
+  'l.facebook.com': {
+    pathname: 'l.php',
+    key: 'u'
   },
-  'plus.url.google.com': function (q) {
-    return q.url;
+  'plus.url.google.com': {
+    pathname: 'url',
+    key: 'url'
   },
-  'www.google.com': function (q) {
-    return q.url;
+  'www.google.com': {
+    pathname: 'url',
+    key: 'url'
   },
-  'l.instagram.com': function (q) {
-    return q.u;
+  'l.instagram.com': {
+    pathname: '',
+    key: 'u'
   },
-  'l.messenger.com': function (q) {
-    return q.u;
+  'l.messenger.com': {
+    pathname: 'l.php',
+    key: 'u'
   },
-  'slack-redir.net': function (q) {
-    return q.url;
+  'slack-redir.net': {
+    pathname: 'link',
+    key: 'url'
   },
-  'steamcommunity.com': function (q) {
-    return q.url;
+  'steamcommunity.com': {
+    pathname: 'linkfilter/',
+    key: 'url'
   },
-  't.umblr.com': function (q) {
-    return q.z;
+  't.umblr.com': {
+    pathname: 'redirect',
+    key: 'z'
   },
-  'vk.com': function (q) {
-    return q.to;
+  'vk.com': {
+    pathname: 'away.php',
+    key: 'to'
   },
-  'www.youtube.com': function (q) {
-    return q.q;
+  'www.youtube.com': {
+    pathname: 'redirect',
+    key: 'q'
   }
 };
 
-const urls = [
-  'https://exit.sc/*',
-  'https://l.facebook.com/l.php*',
-  'https://plus.url.google.com/url*',
-  'https://www.google.com/url*',
-  'https://l.instagram.com/*',
-  'https://l.messenger.com/l.php*',
-  'https://slack-redir.net/link*',
-  'https://steamcommunity.com/linkfilter/*',
-  'https://t.umblr.com/redirect*',
-  'https://vk.com/away.php*',
-  'https://www.youtube.com/redirect*'
-];
+const urls = Object.keys(sites).map(function(host) {
+  return `https://${host}/${sites[host].pathname}*`;
+});
 
 chrome.webRequest.onBeforeRequest.addListener(function(request) {
   const url = new URL(request.url);
+  const site = sites[url.host];
+
   const pairs = url.search.slice(1).split('&');
 
   const q = pairs.reduce((o, pair) => {
@@ -58,7 +61,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(request) {
     return o;
   }, {});
 
-  const redirectUrl = sites[url.host](q);
+  const redirectUrl = q[site.key];
 
   if (redirectUrl) {
     return { redirectUrl };
