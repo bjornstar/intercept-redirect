@@ -7,6 +7,10 @@ const sites = {
     pathname: 'l.php',
     key: 'u'
   },
+  'news.url.google.com': {
+    pathname: 'url',
+    key: 'url'
+  },
   'plus.url.google.com': {
     pathname: 'url',
     key: 'url'
