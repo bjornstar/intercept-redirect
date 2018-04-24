@@ -7,6 +7,7 @@
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
+		"https://disq.us/",
 		"https://exit.sc/",
 		"https://l.facebook.com/",
 		"https://news.url.google.com/",
@@ -20,5 +21,5 @@
 		"https://vk.com/",
 		"https://www.youtube.com/"
 	],
-	"version": "1.3.0"
+	"version": "1.4.0"
 }

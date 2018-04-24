@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## 1.4.0
+- Add `disq.us`
+
 ## 1.3.0
 - Add `news.url.google.com`
 

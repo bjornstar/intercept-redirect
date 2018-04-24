@@ -1,4 +1,8 @@
 const sites = {
+  'disq.us': {
+    pathname: 'url',
+    key: 'url'
+  },
   'exit.sc': {
     pathname: '',
     key: 'url'
