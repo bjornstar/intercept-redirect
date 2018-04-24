@@ -57,7 +57,7 @@ const sites = {
 };
 
 const urls = Object.keys(sites).map(function(host) {
-  return `https://${host}/${sites[host].pathname}*`;
+  return `*://${host}/${sites[host].pathname}*`;
 });
 
 chrome.webRequest.onBeforeRequest.addListener(function(request) {

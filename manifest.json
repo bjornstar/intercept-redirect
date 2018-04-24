@@ -7,19 +7,19 @@
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
-		"https://disq.us/",
-		"https://exit.sc/",
-		"https://l.facebook.com/",
-		"https://news.url.google.com/",
-		"https://plus.url.google.com/",
-		"https://www.google.com/",
-		"https://l.instagram.com/",
-		"https://l.messenger.com/",
-		"https://slack-redir.net/",
-		"https://steamcommunity.com/",
-		"https://t.umblr.com/",
-		"https://vk.com/",
-		"https://www.youtube.com/"
+		"*://disq.us/",
+		"*://exit.sc/",
+		"*://l.facebook.com/",
+		"*://news.url.google.com/",
+		"*://plus.url.google.com/",
+		"*://www.google.com/",
+		"*://l.instagram.com/",
+		"*://l.messenger.com/",
+		"*://slack-redir.net/",
+		"*://steamcommunity.com/",
+		"*://t.umblr.com/",
+		"*://vk.com/",
+		"*://www.youtube.com/"
 	],
-	"version": "1.5.0"
+	"version": "1.6.0"
 }

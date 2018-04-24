@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v1.6.0 - 2018-04-24
+- Intercept all requests regardless of transport
+
 ## v1.5.0 - 2018-04-24
 - `disq.us` adds some extraneous data to the url, we need to strip it
 - Add dates and `v` to changelog
