@@ -1,7 +1,10 @@
 const sites = {
   'disq.us': {
     pathname: 'url',
-    key: 'url'
+    key: 'url',
+    extra: function (s) {
+      return s.substring(0, s.lastIndexOf(':'));
+    }
   },
   'exit.sc': {
     pathname: '',
@@ -69,7 +72,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(request) {
     return o;
   }, {});
 
-  const redirectUrl = q[site.key];
+  const redirectUrl = q[site.key] && site.extra && site.extra(q[site.key]);
 
   if (redirectUrl) {
     return { redirectUrl };
