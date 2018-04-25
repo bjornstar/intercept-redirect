@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v1.7.0 - 2018-04-25
+- If there's no extra data, just return the key
+- I should probably write some tests
+
 ## v1.6.0 - 2018-04-24
 - Intercept all requests regardless of transport
 

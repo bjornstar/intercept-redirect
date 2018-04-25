@@ -72,7 +72,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(request) {
     return o;
   }, {});
 
-  const redirectUrl = q[site.key] && site.extra && site.extra(q[site.key]);
+  const redirectUrl = (!site.extra && q[site.key]) || site.extra(q[site.key] || '');
 
   if (redirectUrl) {
     return { redirectUrl };
