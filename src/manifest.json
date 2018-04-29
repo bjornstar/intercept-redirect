@@ -10,6 +10,7 @@
 		"*://disq.us/",
 		"*://exit.sc/",
 		"*://l.facebook.com/",
+		"*://www.google.co.jp/",
 		"*://news.url.google.com/",
 		"*://plus.url.google.com/",
 		"*://www.google.com/",
@@ -21,5 +22,5 @@
 		"*://vk.com/",
 		"*://www.youtube.com/"
 	],
-	"version": "1.7.0"
+	"version": "2.0.0"
 }

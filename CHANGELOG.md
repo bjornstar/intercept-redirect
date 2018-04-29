@@ -1,5 +1,11 @@
 # Intercept Redirect
 
+## v2.0.0 - 2018-04-29
+- Add Google image search redirect
+- Add `test.js`
+- Reorganize into src & build directories
+- Add compatibility for node
+
 ## v1.7.0 - 2018-04-25
 - If there's no extra data, just return the key
 - I should probably write some tests
