@@ -1,5 +1,12 @@
 # Intercept Redirect
 
+## v3.0.0 - 2018-05-02
+- Test with TAP
+- Rename `src` to `webextension`
+- Add `package.json`
+- Add `node_modules` to `.gitignore`
+- Put built web extensions in `build` directory
+
 ## v2.0.0 - 2018-04-29
 - Add Google image search redirect
 - Add `test.js`

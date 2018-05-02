@@ -1,0 +1,27 @@
+{
+  "name": "@bjornstar/intercept-redirect",
+  "version": "3.0.0",
+  "description": "Skip tracking redirects that serve no purpose other than to waste your precious time.",
+  "main": "webextension/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "^11.1.4"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjornstar/intercept-redirect.git"
+  },
+  "keywords": [
+    "webextension",
+    "redirect"
+  ],
+  "author": "Bjorn Stromberg <bjorn@bjornstar.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjornstar/intercept-redirect/issues"
+  },
+  "homepage": "https://github.com/bjornstar/intercept-redirect#readme"
+}
