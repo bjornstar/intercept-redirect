@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.2.3 - 2018-05-08
+- [CircleCI] Cache node_modules to share among jobs
+
 ## v3.2.2 - 2018-05-08
 - Actually add travis badge to README
 - [CircleCI] Add version to workflows

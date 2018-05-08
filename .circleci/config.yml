@@ -7,10 +7,20 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - save_cache:
+          keys:
+            - node_modules-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - node_modules
+
   test:
     docker:
       - image: circleci/node:8
     steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-{{ .Branch }}-{{ .Revision }}
       - run: npm test
 
 workflows:
