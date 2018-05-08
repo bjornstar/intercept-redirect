@@ -1,5 +1,11 @@
 # Intercept Redirect
 
+## v3.2.2 - 2018-05-08
+- Actually add travis badge to README
+- [CircleCI] Add version to workflows
+- [CircleCI] Requires should be a map
+- [CircleCI] Fix spacing for test
+
 ## v3.2.1 - 2018-05-08
 - Add travis badge to README
 
