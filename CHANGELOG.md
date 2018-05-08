@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.2.4 - 2018-05-08
+- [CircleCI] `save_cache` uses `key` not `keys`
+
 ## v3.2.3 - 2018-05-08
 - [CircleCI] Cache node_modules to share among jobs
 
