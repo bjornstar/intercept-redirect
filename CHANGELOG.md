@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.1.0 - 2018-05-08
+- Add circleci
+
 ## v3.0.0 - 2018-05-02
 - Test with TAP
 - Rename `src` to `webextension`
