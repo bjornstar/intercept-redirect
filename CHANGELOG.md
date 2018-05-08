@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.2.1 - 2018-05-08
+- Add travis badge to README
+
 ## v3.2.0 - 2018-05-08
 - Add travis-ci
 
