@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  install:
+  build:
     docker:
       - image: circleci/node:8
     steps:
@@ -11,9 +11,9 @@ jobs:
       - image: circleci/node:8
     steps:
       - run: npm test
-workflow:
-  install_and_test:
+workflows:
+  build_and_test:
     jobs:
-      - install
+      - build
       - test:
-        requires: install
+        requires: build

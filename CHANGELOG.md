@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v3.1.1 - 2018-05-08
+- `workflows` instead of `workflow`
+- `build` instead of `install`
+
 ## v3.1.0 - 2018-05-08
 - Add circleci
 
