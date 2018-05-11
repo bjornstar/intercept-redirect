@@ -11,10 +11,10 @@ install:
   - npm install
 
 test_script:
-  - mkdir -p reports
-  - ./node_modules/.bin/mocha test --reporter=xunit | tee reports/test.xml
+  - ./node_modules/.bin/mocha test --reporter=xunit | tee test-results.xml
 
 after_test:
   - ps: |
       $wc = New-Object 'System.Net.WebClient'
-      $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\reports\test.xml))
+      $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\test-results.xml))
+      Push-AppveyorArtifact (Resolve-Path '.\test-results.xml')
