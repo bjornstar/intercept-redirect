@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v3.4.0 - 2018-05-11
+- [Appveyor] Test 3 latest versions of node
+- [Appveyor] Upload test results to the junit endpoint
+- [README] Add CircleCI and Appveyor badges
+
 ## v3.3.2 - 2018-05-11
 - [Appveyor] Add support for testing on `appveyor`
 
