@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v3.3.1 - 2018-05-11
+- [Testing] Purposely failing test was successfully caught
+- [Packaging] Match manifest and package versions
+- [CircleCI] Try adding test results
+
 ## v3.3.0 - 2018-05-11
 - [Testing] Switch from `tap` to `mocha`, it's faster
 - [CircleCI] Output test results in xunit format in the `reports` directory

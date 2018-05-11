@@ -23,6 +23,8 @@ jobs:
       - run: |
           mkdir -p reports
           ./node_modules/.bin/mocha test --reporter=xunit | tee reports/test.xml
+      - store_test_results:
+          path: reports
 
 workflows:
   version: 2
