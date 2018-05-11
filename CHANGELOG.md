@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.3.2 - 2018-05-11
+- [Appveyor] Add support for testing on `appveyor`
+
 ## v3.3.1 - 2018-05-11
 - [Testing] Purposely failing test was successfully caught
 - [Packaging] Match manifest and package versions
