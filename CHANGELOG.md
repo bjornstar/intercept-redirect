@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v3.3.0 - 2018-05-11
+- [Testing] Switch from `tap` to `mocha`, it's faster
+- [CircleCI] Output test results in xunit format in the `reports` directory
+
 ## v3.2.4 - 2018-05-08
 - [CircleCI] `save_cache` uses `key` not `keys`
 

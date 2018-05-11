@@ -20,7 +20,9 @@ jobs:
       - restore_cache:
           keys:
           - node_modules-{{ .Branch }}-{{ .Revision }}
-      - run: npm test
+      - run: |
+          mkdir -p reports
+          ./node_modules/.bin/mocha test --reporter=xunit | tee reports/test.xml
 
 workflows:
   version: 2

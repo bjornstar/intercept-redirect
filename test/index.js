@@ -1,9 +1,11 @@
-const tap = require('tap');
+const assert = require('assert');
+const mocha = require('mocha');
 
 const webExtension = require('../webextension');
 const manifest = require('../webextension/manifest.json');
-const package = require('../package.json');
+const pkg = require('../package.json');
 
+const { describe, it } = mocha;
 const { analyzeURL } = webExtension;
 
 const urls = [
@@ -15,7 +17,7 @@ const urls = [
   'https://www.google.co.jp/url?q=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.co.jp/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://news.url.google.com/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
-  'https://plus.url.google.com/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://plus.url.google.com/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirects',
   'https://www.google.com/imgres?imgrefurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.com/imgres?imgurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.com/url?q=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
@@ -44,23 +46,58 @@ const testSites = urls.map(function (url) {
 
 const webExtensionSites = Object.keys(webExtension.sites);
 
-urls.forEach(function (url) {
-  tap.same(analyzeURL({ url }), { redirectUrl }, `Source: ${url}`);
+describe('analyzeURL', function () {
+  describe('Each URL redirects to the correct location', function () {
+    urls.forEach(function (url) {
+      it(`url: ${url}`, function () {
+        assert.deepEqual(analyzeURL({ url }), { redirectUrl });
+      });
+    });
+  });
+
+  describe('No redirect for sites that are implemented but the URLs do not match', function () {
+    const url = 'https://www.google.com/';
+
+    it(`url: ${url}`, function () {
+      assert.ok(!analyzeURL({ url }));
+    });
+  });
+
+  describe('No redirect for sites that are not implemented', function () {
+    const url = 'https://bjornstar.com/';
+
+    it(`url: ${url}`, function () {
+      assert.ok(!analyzeURL({ url }));
+    });
+  });
 });
 
-webExtensionSites.forEach(function (site) {
-  tap.ok(manifestSites.indexOf(site) !== -1, `Unmatched: ${site}`);
+describe('Packaging', function () {
+  describe('Every site implemented in the webExtension is in the manifest permissions', function () {
+    webExtensionSites.forEach(function (site) {
+      it(`site: ${site}`, function () {
+        assert.ok(manifestSites.indexOf(site) !== -1, `Unmatched: ${site}`);
+      });
+    });
+  });
+
+  describe('Every site in the manifest permissions is implemented in the webExension', function () {
+    manifestSites.forEach(function (site) {
+      it (`site: ${site}`, function () {
+        assert.ok(webExtensionSites.indexOf(site) !== -1, `Unmatched: ${site}`);
+      });
+    });
+  });
+
+  describe('Every site implemented inthe webExtension has a test', function () {
+    manifestSites.forEach(function (site) {
+      it(`site: ${site}`, function () {
+        assert.ok(testSites.indexOf(site) !== -1, `Missing tests: ${site}`);
+      });
+    });
+  })
+
+  it('Version number is the same in both the package and manifest', function () {
+    assert.equal(manifest.version, pkg.version);
+  });
 });
-
-manifestSites.forEach(function (site) {
-  tap.ok(webExtensionSites.indexOf(site) !== -1, `Unmatched: ${site}`);
-});
-
-manifestSites.forEach(function (site) {
-  tap.ok(testSites.indexOf(site) !== -1, `Missing tests: ${site}`);
-});
-
-tap.notOk(analyzeURL({ url: 'https://www.google.com/' }));
-tap.notOk(analyzeURL({ url: 'https://bjornstar.com/' }));
-
-tap.equal(manifest.version, package.version);
