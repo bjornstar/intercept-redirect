@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.4.1 - 2018-05-18
+- [CircleCI] Remove badge from README because it shows build as failing instead of passing, issue reported to CircleCI, but after a week nothing has changed
+
 ## v3.4.0 - 2018-05-11
 - [Appveyor] Test 3 latest versions of node
 - [Appveyor] Upload test results to the junit endpoint
