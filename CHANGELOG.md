@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v3.5.2 - 2018-05-24
+- [npm] Add `.npmignore`
+- [Dependencies] Update `mocha` from `v5.1.1` to `v5.2.0`
+
 ## v3.5.1 - 2018-05-24
 - [CircleCI] Restore badge to README, it appears to be passing now, but no communication was received from CircleCI indicating it was fixed
 - [Testing] Improve CHANGELOG version detection: The first version detected should match the package version

@@ -1,0 +1,4 @@
+.appveyor.yml
+.circleci
+.travis.yml
+build
