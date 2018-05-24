@@ -1,14 +1,17 @@
 const assert = require('assert');
+const fs = require('fs');
 const mocha = require('mocha');
+const path = require('path');
 
 const webExtension = require('../webextension');
 const manifest = require('../webextension/manifest.json');
 const pkg = require('../package.json');
 
 const { describe, it } = mocha;
-const { analyzeURL } = webExtension;
+const { analyzeURL, subdomain } = webExtension;
 
 const urls = [
+  'https://bjornstar.digidip.net/visit?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://disq.us/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4',
   'https://exit.sc/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.facebook.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
@@ -41,7 +44,8 @@ const manifestSites = manifest.permissions.filter(function (permission) {
 });
 
 const testSites = urls.map(function (url) {
-  return url.substring(8, url.indexOf('/', 8));
+  const host = url.substring(8, url.indexOf('/', 8));
+  return subdomain(host);
 });
 
 const webExtensionSites = Object.keys(webExtension.sites);
@@ -89,7 +93,7 @@ describe('Packaging', function () {
     });
   });
 
-  describe('Every site implemented inthe webExtension has a test', function () {
+  describe('Every site implemented in the webExtension has a test', function () {
     manifestSites.forEach(function (site) {
       it(`site: ${site}`, function () {
         assert.ok(testSites.indexOf(site) !== -1, `Missing tests: ${site}`);
@@ -99,5 +103,40 @@ describe('Packaging', function () {
 
   it('Version number is the same in both the package and manifest', function () {
     assert.equal(manifest.version, pkg.version);
+  });
+
+  it('The CHANGELOG has an entry for the current version', function (done) {
+    fs.readFile(path.resolve('./CHANGELOG.md'), 'utf8', function (error, changelog) {
+      if (error) {
+        return done(error);
+      }
+
+      const lines = changelog.split('\n');
+      const versionLine = `## v${pkg.version}`;
+
+      for (var i = 0; i < lines.length; i += 1) {
+        if (lines[i].indexOf(versionLine) === 0) {
+          return done();
+        }
+      }
+
+      done('Current version not found in CHANGELOG');
+    });
+  });
+});
+
+describe('Subdomain', function () {
+  it(`For supported domains returns *.domain`, function () {
+    assert.equal(subdomain('foobar.digidip.net'), '*.digidip.net');
+    assert.equal(subdomain('foo.bar.digidip.net'), '*.digidip.net');
+  });
+
+  it('Does not apply to domain host', function () {
+    assert.equal(subdomain('digidip.net'), 'digidip.net');
+  });
+
+  it('Returns host when not supported', function () {
+    assert.equal(subdomain('intercept-redirect.bjornstar.com'), 'intercept-redirect.bjornstar.com');
+    assert.equal(subdomain('bjornstar.com'), 'bjornstar.com');
   });
 });

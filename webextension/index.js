@@ -1,5 +1,5 @@
-// For node compatibility so we can test.
-const URL = typeof window === 'undefined' ? require('url').URL : window.URL;
+// URL polyfill
+const URL = typeof window === 'object' ? window.URL : require('url').URL;
 
 const googlePathnames = {
   '/imgres': ['imgurl','imgrefurl'],
@@ -7,6 +7,11 @@ const googlePathnames = {
 };
 
 const sites = {
+  '*.digidip.net': {
+    pathnames: {
+      '/visit': ['url']
+    }
+  },
   'disq.us': {
     pathnames: {
       '/url': ['url']
@@ -83,6 +88,24 @@ const sites = {
   }
 };
 
+const domains = [
+  'digidip.net'
+];
+
+function subdomain(host) {
+  const hostLength = host.length;
+
+  for (let i = 0; i < domains.length; i += 1) {
+    const domain = domains[i];
+    const expectedIndex = hostLength - domain.length;
+
+    if (expectedIndex > 0 && host.lastIndexOf(domain) === expectedIndex) {
+      return `*.${domain}`;
+    }
+  }
+  return host;
+}
+
 function reduceKeyValues(o, pair) {
   const [k, v] = pair.split('=');
   o[k] = decodeURIComponent(v);
@@ -99,14 +122,17 @@ function findKey(o, keys = []) {
 
 function analyzeURL(request) {
   const url = new URL(request.url);
-  const site = sites[url.host];
+  const host = subdomain(url.host);
+
+  const site = sites[host];
 
   if (!site) {
     return;
   }
 
-  const keys = site.pathnames[url.pathname];
-  const pairs = url.search.slice(1).split('&');
+  const { pathname, search } = url;
+  const keys = site.pathnames[pathname];
+  const pairs = search.slice(1).split('&');
 
   const q = pairs.reduce(reduceKeyValues, {});
   const value = findKey(q, keys);
@@ -124,11 +150,11 @@ function reduceSites(urls, host) {
 
 const urls = Object.keys(sites).reduce(reduceSites, []);
 
-// For node compatibility so we can test.
+// Only runs in the browser
 typeof chrome === 'object' && chrome.webRequest.onBeforeRequest.addListener(analyzeURL, { urls }, ['blocking']);
 
-// For node compatibility so we can test.
 typeof exports === 'object' && Object.assign(exports, {
   analyzeURL,
-  sites
+  sites,
+  subdomain
 });

@@ -1,5 +1,12 @@
 # Intercept Redirect
 
+## v3.5.0 - 2018-05-24
+- Add `*.digidip.net` (Fixes #2)
+- Add support for wildcard subdomains
+- [Testing] Add missing space in test description
+- [Testing] Ensure CHANGELOG has an entry for current version
+- Improve readability of URL polyfill
+
 ## v3.4.1 - 2018-05-18
 - [CircleCI] Remove badge from README because it shows build as failing instead of passing, issue reported to CircleCI, but after a week nothing has changed
 
