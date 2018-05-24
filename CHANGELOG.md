@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v3.5.1 - 2018-05-24
+- [CircleCI] Restore badge to README, it appears to be passing now, but no communication was received from CircleCI indicating it was fixed
+- [Testing] Improve CHANGELOG version detection: The first version detected should match the package version
+- [Packaging] Add `browser extension` to keywords
+
 ## v3.5.0 - 2018-05-24
 - Add `*.digidip.net` (Fixes #2)
 - Add support for wildcard subdomains

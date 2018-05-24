@@ -112,15 +112,19 @@ describe('Packaging', function () {
       }
 
       const lines = changelog.split('\n');
+      const versionRe = /^## v\d+\.\d+\.\d+/;
       const versionLine = `## v${pkg.version}`;
 
       for (var i = 0; i < lines.length; i += 1) {
-        if (lines[i].indexOf(versionLine) === 0) {
-          return done();
+        const line = lines[i];
+
+        if (versionRe.test(line)) {
+          assert.equal(line.indexOf(versionLine), 0, `Package: ${versionLine}, Latest CHANGELOG: ${line}`)
+          return done()
         }
       }
 
-      done('Current version not found in CHANGELOG');
+      done(new Error('No version found in CHANGELOG'));
     });
   });
 });
