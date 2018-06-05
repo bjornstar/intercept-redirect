@@ -32,6 +32,7 @@ const urls = [
   'https://twitter.com/i/redirect?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://t.umblr.com/redirect?z=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://vk.com/away.php?to=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://workable.com/nr?l=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.youtube.com/redirect?q=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect'
 ];
 

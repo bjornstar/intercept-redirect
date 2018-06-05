@@ -2,6 +2,7 @@
 	"background": {
 		"scripts": [ "index.js" ]
 	},
+	"description": "Skip tracking redirects that serve no purpose other than to waste your valuable time.",
 	"manifest_version": 2,
 	"name": "Intercept Redirect",
 	"permissions": [
@@ -22,7 +23,8 @@
 		"*://twitter.com/",
 		"*://t.umblr.com/",
 		"*://vk.com/",
+		"*://workable.com/",
 		"*://www.youtube.com/"
 	],
-	"version": "3.5.2"
+	"version": "3.6.0"
 }

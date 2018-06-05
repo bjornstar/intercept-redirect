@@ -81,6 +81,11 @@ const sites = {
       '/away.php': ['to']
     }
   },
+  'workable.com': {
+    pathnames: {
+      '/nr': ['l']
+    }
+  },
   'www.youtube.com': {
     pathnames: {
       '/redirect': ['q']

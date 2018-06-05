@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v3.6.0 - 2018-06-05
+- Add `workable.com` (Fixes #3)
+- [Packaging] Update description and copy to `manifest.json`
+
 ## v3.5.2 - 2018-05-24
 - [npm] Add `.npmignore`
 - [Dependencies] Update `mocha` from `v5.1.1` to `v5.2.0`
