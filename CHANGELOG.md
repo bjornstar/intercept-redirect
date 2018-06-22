@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.6.2 - 2018-06-22
+- [CircleCI] Restore badge, they [rolled back the badge change](https://discuss.circleci.com/t/add-way-to-clear-1-0-is-sunsetting-on-status-badge/23085/13)
+
 ## v3.6.1 - 2018-06-21
 - [CircleCI] Remove badge again, they've put [an unwelcome warning in the badge](https://discuss.circleci.com/t/add-way-to-clear-1-0-is-sunsetting-on-status-badge/23085)
 
