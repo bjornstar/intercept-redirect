@@ -11,6 +11,9 @@ const sites = {
   '*.curseforge.com': {
     pathnames: {
       '/linkout': ['remoteUrl']
+    },
+    extra: function (s = '') {
+      return decodeURIComponent(s);
     }
   },
   '*.digidip.net': {

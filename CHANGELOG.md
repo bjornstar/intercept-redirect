@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.7.1 - 2018-08-19
+- `curseforge.com` actually double URI encodes their link
+
 ## v3.7.0 - 2018-08-19
 - Add `curseforge.com`'s linkout
 

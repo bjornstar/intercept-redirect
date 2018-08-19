@@ -12,7 +12,7 @@ const { analyzeURL, subdomain } = webExtension;
 
 const urls = [
   'https://bjornstar.digidip.net/visit?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
-  'https://wow.curseforge.com/linkout?remoteUrl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://wow.curseforge.com/linkout?remoteUrl=https%253A%252F%252Fbjornstar.com%252Fintercept-redirect', // curseforge double URI encodes
   'https://disq.us/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4',
   'https://exit.sc/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.facebook.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
