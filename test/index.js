@@ -12,6 +12,7 @@ const { analyzeURL, subdomain } = webExtension;
 
 const urls = [
   'https://bjornstar.digidip.net/visit?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://wow.curseforge.com/linkout?remoteUrl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://disq.us/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4',
   'https://exit.sc/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.facebook.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
@@ -134,10 +135,12 @@ describe('Subdomain', function () {
   it(`For supported domains returns *.domain`, function () {
     assert.equal(subdomain('foobar.digidip.net'), '*.digidip.net');
     assert.equal(subdomain('foo.bar.digidip.net'), '*.digidip.net');
+    assert.equal(subdomain('wow.curseforge.com'), '*.curseforge.com');
   });
 
   it('Does not apply to domain host', function () {
     assert.equal(subdomain('digidip.net'), 'digidip.net');
+    assert.equal(subdomain('curseforge.com'), 'curseforge.com');
   });
 
   it('Returns host when not supported', function () {

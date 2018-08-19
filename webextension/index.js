@@ -7,6 +7,12 @@ const googlePathnames = {
 };
 
 const sites = {
+  // 2018-08-19 -- https://wow.curseforge.com/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252f1AjSgEH.png
+  '*.curseforge.com': {
+    pathnames: {
+      '/linkout': ['remoteUrl']
+    }
+  },
   '*.digidip.net': {
     pathnames: {
       '/visit': ['url']
@@ -94,6 +100,7 @@ const sites = {
 };
 
 const domains = [
+  'curseforge.com',
   'digidip.net'
 ];
 

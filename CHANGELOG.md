@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.7.0 - 2018-08-19
+- Add `curseforge.com`'s linkout
+
 ## v3.6.2 - 2018-06-22
 - [CircleCI] Restore badge, they [rolled back the badge change](https://discuss.circleci.com/t/add-way-to-clear-1-0-is-sunsetting-on-status-badge/23085/13)
 
