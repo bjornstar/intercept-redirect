@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v3.9.0 - 2018-10-01
+- Add a build script, outputs in build directory
+- Move webstore assets into assets directory
+
 ## v3.8.0 - 2018-10-01
 - Add icons, screenshots, and promo tile created by Janet Fu
 

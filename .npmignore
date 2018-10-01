@@ -1,4 +1,5 @@
 .appveyor.yml
 .circleci
 .travis.yml
+assets
 build
