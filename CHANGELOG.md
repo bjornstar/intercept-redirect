@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v3.8.0 - 2018-10-01
+- Add icons, screenshots, and promo tile created by Janet Fu
+
 ## v3.7.1 - 2018-08-19
 - `curseforge.com` actually double URI encodes their link
 
