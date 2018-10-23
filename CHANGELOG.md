@@ -1,5 +1,14 @@
 # Intercept Redirect
 
+## v4.0.0 - 2018-10-23
+- Update SVG to occupy the whole frame
+- Update app icons to occupy the whole frame
+- Remove other sizes of icons
+- Make the README match what's in the description
+- Add .DS_Store to .gitignore
+- Add a link in the README to install the extension
+- List all supported domains in the README
+
 ## v3.9.0 - 2018-10-01
 - Add a build script, outputs in build directory
 - Move webstore assets into assets directory
