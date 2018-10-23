@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v4.0.1 - 2018-10-23
+- Make build.sh executable
+- Fix image URL in README
+
 ## v4.0.0 - 2018-10-23
 - Update SVG to occupy the whole frame
 - Update app icons to occupy the whole frame
