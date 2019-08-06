@@ -16,6 +16,7 @@ const urls = [
   'https://disq.us/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4',
   'https://exit.sc/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.facebook.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://gate.sc/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.co.jp/imgres?imgrefurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.co.jp/imgres?imgurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.co.jp/url?q=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',

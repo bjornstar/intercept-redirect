@@ -18,7 +18,8 @@
 		"*://*.digidip.net/",
 		"*://disq.us/",
 		"*://exit.sc/",
-		"*://l.facebook.com/",
+    "*://l.facebook.com/",
+    "*://gate.sc/",
 		"*://www.google.co.jp/",
 		"*://news.url.google.com/",
 		"*://plus.url.google.com/",
@@ -33,5 +34,5 @@
 		"*://workable.com/",
 		"*://www.youtube.com/"
 	],
-	"version": "4.0.1"
+	"version": "4.1.0"
 }

@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v4.1.0 - 2019-08-06
+- Add soundcloud's `gate.sc`
+
 ## v4.0.1 - 2018-10-23
 - Make build.sh executable
 - Fix image URL in README

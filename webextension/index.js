@@ -39,6 +39,10 @@ const sites = {
       '/l.php': ['u']
     }
   },
+  // 2019-08-06 - https://gate.sc/?url=http%3A%2F%2Ffanlink.to%2FPartial7&token=10fd54-1-1565068249069
+  'gate.sc': {
+    pathnames: { '/': ['url'] }
+  },
   'www.google.co.jp': {
     pathnames: googlePathnames
   },

@@ -14,6 +14,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - disq.us
 - exit.sc
 - l.facebook.com
+- gate.sc
 - www.google.co.jp
 - news.url.google.com
 - plus.url.google.com
