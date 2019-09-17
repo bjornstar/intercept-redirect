@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v4.2.1 - 2019-09-17
+- Update README
+
 ## v4.2.0 - 2019-09-17
 - Add `console.ebsta.com`
 

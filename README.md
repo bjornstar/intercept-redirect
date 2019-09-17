@@ -12,6 +12,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - *.curseforge.com
 - *.digidip.net
 - disq.us
+- console.ebsta.com
 - exit.sc
 - l.facebook.com
 - gate.sc
