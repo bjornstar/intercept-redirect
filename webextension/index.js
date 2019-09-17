@@ -29,6 +29,12 @@ const sites = {
       return s.substring(0, s.lastIndexOf(':'));
     }
   },
+  // 2019-09-17 -- https://console.ebsta.com/linktracking/track.aspx?trackid=3a096df7-b279-43a5-b42c-cbda7b72759c-1568686588593&linktrackingid=2&linkuri=https%3A%2F%2Fen-jp.wantedly.com%2Fprojects%2F328561
+  'console.ebsta.com': {
+    pathnames: {
+      '/linktracking/track.aspx': ['linkuri']
+    },
+  },
   'exit.sc': {
     pathnames: {
       '/': ['url']

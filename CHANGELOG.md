@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v4.2.0 - 2019-09-17
+- Add `console.ebsta.com`
+
 ## v4.1.0 - 2019-08-06
 - Add soundcloud's `gate.sc`
 

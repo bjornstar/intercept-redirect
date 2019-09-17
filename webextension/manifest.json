@@ -16,7 +16,8 @@
 		"webRequestBlocking",
 		"*://*.curseforge.com/",
 		"*://*.digidip.net/",
-		"*://disq.us/",
+    "*://disq.us/",
+    "*://console.ebsta.com/",
 		"*://exit.sc/",
     "*://l.facebook.com/",
     "*://gate.sc/",
@@ -34,5 +35,5 @@
 		"*://workable.com/",
 		"*://www.youtube.com/"
 	],
-	"version": "4.1.0"
+	"version": "4.2.0"
 }
