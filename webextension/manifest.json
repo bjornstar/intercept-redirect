@@ -1,39 +1,39 @@
 {
-	"background": {
-		"scripts": [ "index.js" ]
+  "background": {
+    "scripts": [ "index.js" ]
   },
   "browser_action": {
     "default_icon": "icon.png"
   },
-	"description": "Skip tracking redirects that serve no purpose other than to waste your valuable time.",
-	"icons": {
-		"128": "icon.png"
-	},
-	"manifest_version": 2,
-	"name": "Intercept Redirect",
-	"permissions": [
-		"webRequest",
-		"webRequestBlocking",
-		"*://*.curseforge.com/",
-		"*://*.digidip.net/",
+  "description": "Skip tracking redirects that serve no purpose other than to waste your valuable time.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "manifest_version": 2,
+  "name": "Intercept Redirect",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.curseforge.com/",
+    "*://*.digidip.net/",
     "*://disq.us/",
     "*://console.ebsta.com/",
-		"*://exit.sc/",
+    "*://exit.sc/",
     "*://l.facebook.com/",
     "*://gate.sc/",
-		"*://www.google.co.jp/",
-		"*://news.url.google.com/",
-		"*://plus.url.google.com/",
-		"*://www.google.com/",
-		"*://l.instagram.com/",
-		"*://l.messenger.com/",
-		"*://slack-redir.net/",
-		"*://steamcommunity.com/",
-		"*://twitter.com/",
-		"*://t.umblr.com/",
-		"*://vk.com/",
-		"*://workable.com/",
-		"*://www.youtube.com/"
-	],
-	"version": "4.2.1"
+    "*://www.google.co.jp/",
+    "*://news.url.google.com/",
+    "*://plus.url.google.com/",
+    "*://www.google.com/",
+    "*://l.instagram.com/",
+    "*://l.messenger.com/",
+    "*://slack-redir.net/",
+    "*://steamcommunity.com/",
+    "*://twitter.com/",
+    "*://t.umblr.com/",
+    "*://vk.com/",
+    "*://workable.com/",
+    "*://www.youtube.com/"
+  ],
+  "version": "4.2.2"
 }

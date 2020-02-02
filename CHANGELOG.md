@@ -1,5 +1,11 @@
 # Intercept Redirect
 
+## v4.2.2 - 2020-02-02
+- Update all CI platforms to node v12
+- `manifest.json` uses spaces instead of tabs or spaces
+- Update devDependency `mocha` from `v6.2.0` to `v7.0.1`
+- Remove `package-lock.json`
+
 ## v4.2.1 - 2019-09-17
 - Update README
 

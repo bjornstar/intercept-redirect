@@ -111,15 +111,13 @@ describe('Packaging', function () {
 
   it('The CHANGELOG has an entry for the current version', function (done) {
     fs.readFile(path.resolve('./CHANGELOG.md'), 'utf8', function (error, changelog) {
-      if (error) {
-        return done(error);
-      }
+      if (error) return done(error);
 
       const lines = changelog.split('\n');
       const versionRe = /^## v\d+\.\d+\.\d+/;
       const versionLine = `## v${pkg.version}`;
 
-      for (var i = 0; i < lines.length; i += 1) {
+      for (let i = 0; i < lines.length; i += 1) {
         const line = lines[i];
 
         if (versionRe.test(line)) {
@@ -129,6 +127,22 @@ describe('Packaging', function () {
       }
 
       done(new Error('No version found in CHANGELOG'));
+    });
+  });
+
+  it('The manifest does not use tabs', function (done) {
+    fs.readFile(path.resolve('./webextension/manifest.json'), 'utf8', function (error, manifest) {
+      if (error) return done(error);
+
+      const lines = manifest.split('\n');
+      const whitespaceRe = /^(\s+)/
+
+      lines.forEach((line, index) => {
+        const match = line.match(whitespaceRe);
+        assert(!match || !match[0].includes("\t"), `Found a tab on line ${index+1}`);
+      });
+
+      done();
     });
   });
 });

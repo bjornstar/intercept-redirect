@@ -1,11 +1,11 @@
 {
   "name": "@bjornstar/intercept-redirect",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "Skip tracking redirects that serve no purpose other than to waste your valuable time.",
   "main": "webextension/index.js",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^7.0.1"
   },
   "scripts": {
     "build": "./build.sh",
