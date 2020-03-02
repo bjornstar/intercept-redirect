@@ -41,76 +41,76 @@ const urls = [
 
 const redirectUrl = 'https://bjornstar.com/intercept-redirect';
 
-const manifestSites = manifest.permissions.filter(function (permission) {
+const manifestSites = manifest.permissions.filter(permission => {
   return permission !== 'webRequest' && permission !== 'webRequestBlocking';
-}).map(function (site) {
+}).map(site => {
   return site.replace('*://', '').replace('/', '');
 });
 
-const testSites = urls.map(function (url) {
+const testSites = urls.map(url => {
   const host = url.substring(8, url.indexOf('/', 8));
   return subdomain(host);
 });
 
 const webExtensionSites = Object.keys(webExtension.sites);
 
-describe('analyzeURL', function () {
-  describe('Each URL redirects to the correct location', function () {
-    urls.forEach(function (url) {
-      it(`url: ${url}`, function () {
+describe('analyzeURL', () => {
+  describe('Each URL redirects to the correct location', () => {
+    urls.forEach(url => {
+      it(`url: ${url}`, () => {
         assert.deepEqual(analyzeURL({ url }), { redirectUrl });
       });
     });
   });
 
-  describe('No redirect for sites that are implemented but the URLs do not match', function () {
+  describe('No redirect for sites that are implemented but the URLs do not match', () => {
     const url = 'https://www.google.com/';
 
-    it(`url: ${url}`, function () {
+    it(`url: ${url}`, () => {
       assert.ok(!analyzeURL({ url }));
     });
   });
 
-  describe('No redirect for sites that are not implemented', function () {
+  describe('No redirect for sites that are not implemented', () => {
     const url = 'https://bjornstar.com/';
 
-    it(`url: ${url}`, function () {
+    it(`url: ${url}`, () => {
       assert.ok(!analyzeURL({ url }));
     });
   });
 });
 
-describe('Packaging', function () {
-  describe('Every site implemented in the webExtension is in the manifest permissions', function () {
-    webExtensionSites.forEach(function (site) {
-      it(`site: ${site}`, function () {
+describe('Packaging', () => {
+  describe('Every site implemented in the webExtension is in the manifest permissions', () => {
+    webExtensionSites.forEach(site => {
+      it(`site: ${site}`, () => {
         assert.ok(manifestSites.indexOf(site) !== -1, `Unmatched: ${site}`);
       });
     });
   });
 
-  describe('Every site in the manifest permissions is implemented in the webExension', function () {
-    manifestSites.forEach(function (site) {
-      it (`site: ${site}`, function () {
+  describe('Every site in the manifest permissions is implemented in the webExtension', () => {
+    manifestSites.forEach(site => {
+      it (`site: ${site}`, () => {
         assert.ok(webExtensionSites.indexOf(site) !== -1, `Unmatched: ${site}`);
       });
     });
   });
 
-  describe('Every site implemented in the webExtension has a test', function () {
-    manifestSites.forEach(function (site) {
-      it(`site: ${site}`, function () {
+  describe('Every site implemented in the webExtension has a test', () => {
+    manifestSites.forEach(site => {
+      it(`site: ${site}`, () => {
         assert.ok(testSites.indexOf(site) !== -1, `Missing tests: ${site}`);
       });
     });
-  })
+  });
 
-  it('Version number is the same in both the package and manifest', function () {
+  it('Version number is the same in both the package and manifest', () => {
     assert.equal(manifest.version, pkg.version);
   });
 
-  it('The CHANGELOG has an entry for the current version', function (done) {
-    fs.readFile(path.resolve('./CHANGELOG.md'), 'utf8', function (error, changelog) {
+  it('The CHANGELOG has an entry for the current version', done => {
+    fs.readFile(path.resolve('./CHANGELOG.md'), 'utf8', (error, changelog) => {
       if (error) return done(error);
 
       const lines = changelog.split('\n');
@@ -121,8 +121,8 @@ describe('Packaging', function () {
         const line = lines[i];
 
         if (versionRe.test(line)) {
-          assert.equal(line.indexOf(versionLine), 0, `Package: ${versionLine}, Latest CHANGELOG: ${line}`)
-          return done()
+          assert.equal(line.indexOf(versionLine), 0, `Package: ${versionLine}, Latest CHANGELOG: ${line}`);
+          return done();
         }
       }
 
@@ -130,16 +130,16 @@ describe('Packaging', function () {
     });
   });
 
-  it('The manifest does not use tabs', function (done) {
-    fs.readFile(path.resolve('./webextension/manifest.json'), 'utf8', function (error, manifest) {
+  it('The manifest does not use tabs', done => {
+    fs.readFile(path.resolve('./webextension/manifest.json'), 'utf8', (error, manifest) => {
       if (error) return done(error);
 
       const lines = manifest.split('\n');
-      const whitespaceRe = /^(\s+)/
+      const whitespaceRe = /^(\s+)/;
 
       lines.forEach((line, index) => {
         const match = line.match(whitespaceRe);
-        assert(!match || !match[0].includes("\t"), `Found a tab on line ${index+1}`);
+        assert(!match || !match[0].includes('\t'), `Found a tab on line ${index+1}`);
       });
 
       done();
@@ -147,19 +147,19 @@ describe('Packaging', function () {
   });
 });
 
-describe('Subdomain', function () {
-  it(`For supported domains returns *.domain`, function () {
+describe('Subdomain', () => {
+  it('For supported domains returns *.domain', () => {
     assert.equal(subdomain('foobar.digidip.net'), '*.digidip.net');
     assert.equal(subdomain('foo.bar.digidip.net'), '*.digidip.net');
     assert.equal(subdomain('wow.curseforge.com'), '*.curseforge.com');
   });
 
-  it('Does not apply to domain host', function () {
+  it('Does not apply to domain host', () => {
     assert.equal(subdomain('digidip.net'), 'digidip.net');
     assert.equal(subdomain('curseforge.com'), 'curseforge.com');
   });
 
-  it('Returns host when not supported', function () {
+  it('Returns host when not supported', () => {
     assert.equal(subdomain('intercept-redirect.bjornstar.com'), 'intercept-redirect.bjornstar.com');
     assert.equal(subdomain('bjornstar.com'), 'bjornstar.com');
   });

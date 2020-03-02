@@ -1,5 +1,14 @@
 # Intercept Redirect
 
+## v4.2.3 - 2020-03-02
+- Update `mocha` from `v7.0.1` to `v7.1.0`
+- Add `eslint`
+- Use Object.prototype.hasOwnProperty
+- Fix typo in test description
+- Split test into `mocha` and `eslint`
+- Use arrow functions in tests
+- Remove `browser extension` from keywords in `package.json`
+
 ## v4.2.2 - 2020-02-02
 - Update all CI platforms to node v12
 - `manifest.json` uses spaces instead of tabs or spaces

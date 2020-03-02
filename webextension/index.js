@@ -139,7 +139,7 @@ function reduceKeyValues(o, pair) {
 
 function findKey(o, keys = []) {
   for (let i = 0; i < keys.length; i += 1) {
-    if (o.hasOwnProperty(keys[i])) {
+    if (Object.prototype.hasOwnProperty.call(o, keys[i])) {
       return o[keys[i]];
     }
   }
