@@ -26,6 +26,7 @@
     "*://plus.url.google.com/",
     "*://www.google.com/",
     "*://l.instagram.com/",
+    "*://www.javlibrary.com/",
     "*://l.messenger.com/",
     "*://slack-redir.net/",
     "*://steamcommunity.com/",
@@ -35,5 +36,5 @@
     "*://workable.com/",
     "*://www.youtube.com/"
   ],
-  "version": "4.2.3"
+  "version": "4.3.0"
 }

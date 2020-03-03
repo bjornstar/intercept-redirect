@@ -12,7 +12,7 @@ const sites = {
     pathnames: {
       '/linkout': ['remoteUrl']
     },
-    extra: function (s = '') {
+    extra: (s = '') => {
       return decodeURIComponent(s);
     }
   },
@@ -25,7 +25,7 @@ const sites = {
     pathnames: {
       '/url': ['url']
     },
-    extra: function (s = '') {
+    extra: (s = '') => {
       return s.substring(0, s.lastIndexOf(':'));
     }
   },
@@ -47,7 +47,9 @@ const sites = {
   },
   // 2019-08-06 - https://gate.sc/?url=http%3A%2F%2Ffanlink.to%2FPartial7&token=10fd54-1-1565068249069
   'gate.sc': {
-    pathnames: { '/': ['url'] }
+    pathnames: {
+      '/': ['url']
+    }
   },
   'www.google.co.jp': {
     pathnames: googlePathnames
@@ -68,6 +70,11 @@ const sites = {
   'l.instagram.com': {
     pathnames: {
       '/': ['u']
+    }
+  },
+  'www.javlibrary.com': {
+    pathnames: {
+      '/en/redirect.php': ['url']
     }
   },
   'l.messenger.com': {
@@ -168,7 +175,7 @@ function analyzeURL(request) {
 }
 
 function reduceSites(urls, host) {
-  return urls.concat(Object.keys(sites[host].pathnames).map(function (pathname) {
+  return urls.concat(Object.keys(sites[host].pathnames).map(pathname => {
     return `*://${host}${pathname}*`;
   }));
 }

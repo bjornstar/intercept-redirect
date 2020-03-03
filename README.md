@@ -21,6 +21,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - plus.url.google.com
 - www.google.com
 - l.instagram.com
+- www.javlibrary.com
 - l.messenger.com
 - slack-redir.net
 - steamcommunity.com

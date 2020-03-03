@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v4.3.0 - 2020-03-03
+- Add `www.javlibrary.com`
+- Use arrow functions in `index.js`
+- Ensure `README` lists all sites
+
 ## v4.2.3 - 2020-03-02
 - Update `mocha` from `v7.0.1` to `v7.1.0`
 - Add `eslint`

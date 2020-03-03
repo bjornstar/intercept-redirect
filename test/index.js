@@ -29,6 +29,7 @@ const urls = [
   'https://www.google.com/url?q=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.com/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.instagram.com/?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://www.javlibrary.com/en/redirect.php?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.messenger.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://slack-redir.net/link?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://steamcommunity.com/linkfilter/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
@@ -100,7 +101,7 @@ describe('Packaging', () => {
   describe('Every site implemented in the webExtension has a test', () => {
     manifestSites.forEach(site => {
       it(`site: ${site}`, () => {
-        assert.ok(testSites.indexOf(site) !== -1, `Missing tests: ${site}`);
+        assert.ok(testSites.includes(site), `Missing tests: ${site}`);
       });
     });
   });
@@ -127,6 +128,20 @@ describe('Packaging', () => {
       }
 
       done(new Error('No version found in CHANGELOG'));
+    });
+  });
+
+  it('The README has an entry for every supported domain', done => {
+    fs.readFile(path.resolve('./README.md'), 'utf8', (error, readme) => {
+      if (error) return done(error);
+
+      const lines = readme.split('\n');
+
+      manifestSites.forEach(site => {
+        assert.ok(lines.includes(`- ${site}`), `Missing site: ${site}`);
+      });
+
+      done();
     });
   });
 
