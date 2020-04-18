@@ -31,6 +31,7 @@ const urls = [
   'https://l.instagram.com/?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.javlibrary.com/en/redirect.php?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.messenger.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://gcc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://slack-redir.net/link?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://steamcommunity.com/linkfilter/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://twitter.com/i/redirect?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',

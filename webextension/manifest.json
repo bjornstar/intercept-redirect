@@ -28,6 +28,7 @@
     "*://l.instagram.com/",
     "*://www.javlibrary.com/",
     "*://l.messenger.com/",
+    "*://gcc01.safelinks.protection.outlook.com/",
     "*://slack-redir.net/",
     "*://steamcommunity.com/",
     "*://twitter.com/",
@@ -36,5 +37,5 @@
     "*://workable.com/",
     "*://www.youtube.com/"
   ],
-  "version": "4.3.0"
+  "version": "4.4.0"
 }

@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v4.4.0 - 2020-04-13
+- Add `gcc01.safelinks.protection.outlook.com`
+
 ## v4.3.0 - 2020-03-03
 - Add `www.javlibrary.com`
 - Use arrow functions in `index.js`
