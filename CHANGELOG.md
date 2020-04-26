@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v5.0.0 - 2020-04-25
+- Add `outgoing.prod.mozaws.net`
+- Use new format for parsing
+
 ## v4.4.0 - 2020-04-13
 - Add `gcc01.safelinks.protection.outlook.com`
 

@@ -23,6 +23,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - l.instagram.com
 - www.javlibrary.com
 - l.messenger.com
+- outgoing.prod.mozaws.net
 - gcc01.safelinks.protection.outlook.com
 - slack-redir.net
 - steamcommunity.com

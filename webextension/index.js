@@ -1,127 +1,93 @@
 // URL polyfill
 const URL = typeof window === 'object' ? window.URL : require('url').URL;
 
+const matchPatternToRegex = mp => `^${mp.replace(/\./, '\\.').replace(/\*/, '.*')}`;
+
+const extract = (url, value) => {
+  const re = new RegExp(matchPatternToRegex(url));
+  return url => re.test(url.pathname) && value(url);
+};
+
+const searchParam = key => ({ searchParams }) => searchParams.get(key);
+const decode = (s = '') => decodeURIComponent(s);
+const stripFromColon = (s = '') => s.substring(0, s.lastIndexOf(':'));
+const pickFromLastSlash = (s = '') => s.substring(s.lastIndexOf('/') + 1, s.length);
+
 const googlePathnames = {
-  '/imgres': ['imgurl','imgrefurl'],
-  '/url': ['q','url']
+  '/imgres': ({ searchParams }) => find(['imgurl','imgrefurl'], searchParams.get.bind(searchParams)),
+  '/url': ({ searchParams }) => find(['q','url'], searchParams.get.bind(searchParams))
 };
 
 const sites = {
   // 2018-08-19 -- https://wow.curseforge.com/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252f1AjSgEH.png
   '*.curseforge.com': {
-    pathnames: {
-      '/linkout': ['remoteUrl']
-    },
-    extra: (s = '') => {
-      return decodeURIComponent(s);
-    }
+    '/linkout': url => decode(searchParam('remoteUrl')(url))
   },
   '*.digidip.net': {
-    pathnames: {
-      '/visit': ['url']
-    }
+    '/visit': searchParam('url')
   },
   'disq.us': {
-    pathnames: {
-      '/url': ['url']
-    },
-    extra: (s = '') => {
-      return s.substring(0, s.lastIndexOf(':'));
-    }
+    '/url': url => stripFromColon(searchParam('url')(url))
   },
   // 2019-09-17 -- https://console.ebsta.com/linktracking/track.aspx?trackid=3a096df7-b279-43a5-b42c-cbda7b72759c-1568686588593&linktrackingid=2&linkuri=https%3A%2F%2Fen-jp.wantedly.com%2Fprojects%2F328561
   'console.ebsta.com': {
-    pathnames: {
-      '/linktracking/track.aspx': ['linkuri']
-    },
+    '/linktracking/track.aspx': searchParam('linkuri')
   },
   'exit.sc': {
-    pathnames: {
-      '/': ['url']
-    }
+    '/': searchParam('url')
   },
   'l.facebook.com': {
-    pathnames: {
-      '/l.php': ['u']
-    }
+    '/l.php': searchParam('u')
   },
   // 2019-08-06 - https://gate.sc/?url=http%3A%2F%2Ffanlink.to%2FPartial7&token=10fd54-1-1565068249069
   'gate.sc': {
-    pathnames: {
-      '/': ['url']
-    }
+    '/': searchParam('url')
   },
-  'www.google.co.jp': {
-    pathnames: googlePathnames
-  },
+  'www.google.co.jp': googlePathnames,
   'news.url.google.com': {
-    pathnames: {
-      '/url': ['url']
-    }
+    '/url': searchParam('url')
   },
   'plus.url.google.com': {
-    pathnames: {
-      '/url': ['url']
-    }
+    '/url': searchParam('url')
   },
-  'www.google.com': {
-    pathnames: googlePathnames
-  },
+  'www.google.com': googlePathnames,
   'l.instagram.com': {
-    pathnames: {
-      '/': ['u']
-    }
+    '/': searchParam('u')
   },
   'www.javlibrary.com': {
-    pathnames: {
-      '/en/redirect.php': ['url']
-    }
+    '/en/redirect.php': searchParam('url')
   },
   'l.messenger.com': {
-    pathnames: {
-      '/l.php': ['u']
-    }
+    '/l.php': searchParam('u')
+  },
+  // 2020-04-21 - https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/https%3A//developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns
+  'outgoing.prod.mozaws.net': {
+    '/v1/': ({ pathname }) => decode(pickFromLastSlash(pathname))
   },
   // 2020-04-13 - https://gcc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.metro.tokyo.lg.jp%2Fenglish%2Findex.html
   'gcc01.safelinks.protection.outlook.com': {
-    pathnames: {
-      '/': ['url']
-    }
+    '/': searchParam('url')
   },
   'slack-redir.net': {
-    pathnames: {
-      '/link': ['url']
-    }
+    '/link': searchParam('url')
   },
   'steamcommunity.com': {
-    pathnames: {
-      '/linkfilter/': ['url']
-    }
+    '/linkfilter/': searchParam('url')
   },
   'twitter.com': {
-    pathnames: {
-      '/i/redirect': ['url']
-    }
+    '/i/redirect': searchParam('url')
   },
   't.umblr.com': {
-    pathnames: {
-      '/redirect': ['z']
-    }
+    '/redirect': searchParam('z')
   },
   'vk.com': {
-    pathnames: {
-      '/away.php': ['to']
-    }
+    '/away.php': searchParam('to')
   },
   'workable.com': {
-    pathnames: {
-      '/nr': ['l']
-    }
+    '/nr': searchParam('l')
   },
   'www.youtube.com': {
-    pathnames: {
-      '/redirect': ['q']
-    }
+    '/redirect': searchParam('q')
   }
 };
 
@@ -144,17 +110,31 @@ function subdomain(host) {
   return host;
 }
 
-function reduceKeyValues(o, pair) {
-  const [k, v] = pair.split('=');
-  o[k] = decodeURIComponent(v);
-  return o;
+function reduceSites(urls, host) {
+  return urls.concat(Object.keys(sites[host]).map(pathname => {
+    return `*://${host}${pathname}*`;
+  }));
 }
 
-function findKey(o, keys = []) {
-  for (let i = 0; i < keys.length; i += 1) {
-    if (Object.prototype.hasOwnProperty.call(o, keys[i])) {
-      return o[keys[i]];
-    }
+const urls = Object.keys(sites).reduce(reduceSites, []);
+
+const redirectExtractors = Object.keys(sites).reduce((siteExtractors, site) => {
+  siteExtractors[site] = Object.keys(sites[site]).reduce((pathExtractors, path) => {
+    const value = sites[site][path];
+    return pathExtractors.concat(extract(path, value));
+  }, []);
+
+  return siteExtractors;
+}, {});
+
+function find(a, b) {
+  const isArray = Array.isArray(a);
+  const isFunction = typeof b === 'function';
+  const iterable = isArray ? a : b;
+
+  for (let i = 0; i < iterable.length; i += 1) {
+    let result = isFunction ? b(iterable[i]) : iterable[i](b);
+    if (result) return result;
   }
 }
 
@@ -168,25 +148,10 @@ function analyzeURL(request) {
     return;
   }
 
-  const { pathname, search } = url;
-  const keys = site.pathnames[pathname];
-  const pairs = search.slice(1).split('&');
-
-  const q = pairs.reduce(reduceKeyValues, {});
-  const value = findKey(q, keys);
-
-  const redirectUrl = (site.extra && site.extra(value)) || value;
+  const redirectUrl = find(redirectExtractors[host], url);
 
   return redirectUrl && { redirectUrl };
 }
-
-function reduceSites(urls, host) {
-  return urls.concat(Object.keys(sites[host].pathnames).map(pathname => {
-    return `*://${host}${pathname}*`;
-  }));
-}
-
-const urls = Object.keys(sites).reduce(reduceSites, []);
 
 // Only runs in the browser
 typeof chrome === 'object' && chrome.webRequest.onBeforeRequest.addListener(analyzeURL, { urls }, ['blocking']);
