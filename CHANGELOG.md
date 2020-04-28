@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v5.1.2 - 2020-04-28
+- Actually de-emphasize the Chrome Web Store in the README
+
 ## v5.1.1 - 2020-04-28
 - Use more quotes in YAML, CircleCI choked somewhere
 

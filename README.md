@@ -35,4 +35,14 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 
 ## Installation
 
-Install the [Intercept Redirect Extension from the Chrome Webstore](https://chrome.google.com/webstore/detail/intercept-redirect/kdjmiebhgaleboaamnehjbamlghkoedf).
+### Firefox
+https://intercept-redirect.firefox.bjornstar.com
+Mozilla has been very responsive and new versions are available immediately on the Mozilla Add-On site.
+
+### Opera
+https://intercept-redirect.opera.bjornstar.com
+Opera has been struggling to get extensions reviewed and it may take over a week for a new version to be published.
+
+### Google Chrome
+https://intercept-redirect.chrome.bjornstar.com
+Google has been refusing to publish new versions of this extension. The most recent version on the Chrome Web Store is v4.2.1 which was published in September of 2019.
