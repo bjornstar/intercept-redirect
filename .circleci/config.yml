@@ -1,50 +1,51 @@
 version: 2
 
 jobs:
-  Build:
+  Install Dependencies:
     docker:
       - image: circleci/node:14
     steps:
       - checkout
-      - run: npm install
+      - run: "npm install"
       - save_cache:
-          key: node_modules-{{ .Branch }}-{{ .Revision }}
+          key: "node_modules-{{ .Branch }}-{{ .Revision }}"
           paths:
             - node_modules
 
   Lint:
-    docker: circleci/node:14
+    docker:
+      - image: "circleci/node:14"
     steps:
       - checkout
       - restore_cache:
           keys:
-          - node_modules-{{ .Branch }}-{{ .Revision }}
-      - run: mkdir -p reports
-      - run: ./node_modules/.bin/eslint webextension test --format=junit | tee reports/eslint.xml
+          - "node_modules-{{ .Branch }}-{{ .Revision }}"
+      - run: "mkdir -p reports"
+      - run: "./node_modules/.bin/eslint webextension test --format=junit | tee reports/eslint.xml"
       - store_test_results:
           path: reports
 
   Mocha:
     docker:
-      - image: circleci/node:14
+      - image: "circleci/node:14"
     steps:
       - checkout
       - restore_cache:
           keys:
-          - node_modules-{{ .Branch }}-{{ .Revision }}
-      - run: mkdir -p reports
-      - run: ./node_modules/.bin/mocha test --reporter=xunit | tee reports/mocha.xml
+          - "node_modules-{{ .Branch }}-{{ .Revision }}"
+      - run: "mkdir -p reports"
+      - run: "./node_modules/.bin/mocha test --reporter=xunit | tee reports/mocha.xml"
       - store_test_results:
           path: reports
 
 workflows:
   version: 2
-  Build, Lint, and Mocha:
+  Install Dependencies, Lint, and Mocha:
     jobs:
-      - Build
+      - Install Dependencies
       - Lint:
           requires:
-            - Build
+            - Install Dependencies
       - Mocha:
           requires:
-            - Build
+            - Install Dependencies

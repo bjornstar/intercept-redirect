@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v5.1.1 - 2020-04-28
+- Use more quotes in YAML, CircleCI choked somewhere
+
 ## v5.1.0 - 2020-04-28
 - Ensure a protocol is in the URL (Fixes #12)
 - De-emphasize the Chrome Web Store in the README (Fixes #13)
