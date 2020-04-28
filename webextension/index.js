@@ -3,6 +3,11 @@ const URL = typeof window === 'object' ? window.URL : require('url').URL;
 
 const matchPatternToRegex = mp => `^${mp.replace(/\./, '\\.').replace(/\*/, '.*')}`;
 
+const ensureProtocol = s => {
+  const prepend = /^.*:\/\//.test(s) ? '' : 'https://';
+  return `${prepend}${s}`;
+};
+
 const extract = (url, value) => {
   const re = new RegExp(matchPatternToRegex(url));
   return url => re.test(url.pathname) && value(url);
@@ -150,7 +155,7 @@ function analyzeURL(request) {
 
   const redirectUrl = find(redirectExtractors[host], url);
 
-  return redirectUrl && { redirectUrl };
+  return redirectUrl && { redirectUrl: ensureProtocol(redirectUrl) };
 }
 
 // Only runs in the browser

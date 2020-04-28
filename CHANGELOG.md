@@ -1,5 +1,13 @@
 # Intercept Redirect
 
+## v5.1.0 - 2020-04-28
+- Ensure a protocol is in the URL (Fixes #12)
+- De-emphasize the Chrome Web Store in the README (Fixes #13)
+- Update devDependency `mocha` from `v7.1.0` to `v7.1.2`
+- Try using node `v14` in all three CI
+- CircleCI can run lint and mocha in parallel
+- Add reports to `.gitignore`
+
 ## v5.0.0 - 2020-04-25
 - Add `outgoing.prod.mozaws.net`
 - Use new format for parsing

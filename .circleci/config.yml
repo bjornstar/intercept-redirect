@@ -1,9 +1,9 @@
 version: 2
 
 jobs:
-  build:
+  Build:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:14
     steps:
       - checkout
       - run: npm install
@@ -12,25 +12,39 @@ jobs:
           paths:
             - node_modules
 
-  test:
-    docker:
-      - image: circleci/node:12
+  Lint:
+    docker: circleci/node:14
     steps:
       - checkout
       - restore_cache:
           keys:
           - node_modules-{{ .Branch }}-{{ .Revision }}
-      - run: |
-          mkdir -p reports
-          ./node_modules/.bin/mocha test --reporter=xunit | tee reports/test.xml
+      - run: mkdir -p reports
+      - run: ./node_modules/.bin/eslint webextension test --format=junit | tee reports/eslint.xml
+      - store_test_results:
+          path: reports
+
+  Mocha:
+    docker:
+      - image: circleci/node:14
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-{{ .Branch }}-{{ .Revision }}
+      - run: mkdir -p reports
+      - run: ./node_modules/.bin/mocha test --reporter=xunit | tee reports/mocha.xml
       - store_test_results:
           path: reports
 
 workflows:
   version: 2
-  build_and_test:
+  Build, Lint, and Mocha:
     jobs:
-      - build
-      - test:
+      - Build
+      - Lint:
           requires:
-            - build
+            - Build
+      - Mocha:
+          requires:
+            - Build

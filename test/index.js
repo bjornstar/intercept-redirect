@@ -66,6 +66,16 @@ describe('analyzeURL', () => {
     });
   });
 
+  describe('The redirect should begin with a protocol', () => {
+    it('https:// gets prepended if there is no protocol', () => {
+      const url = 'https://steamcommunity.com/linkfilter/?url=bjornstar.com';
+
+      const { redirectUrl } = analyzeURL({ url });
+
+      assert.strictEqual(redirectUrl.indexOf('https://'), 0);
+    });
+  });
+
   describe('No redirect for sites that are implemented but the URLs do not match', () => {
     const url = 'https://www.google.com/';
 
