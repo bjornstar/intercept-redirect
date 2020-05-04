@@ -20,6 +20,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - news.url.google.com
 - plus.url.google.com
 - www.google.com
+- www.googleadservices.com
 - l.instagram.com
 - www.javlibrary.com
 - l.messenger.com
@@ -41,7 +42,7 @@ Mozilla has been very responsive and new versions are available immediately on t
 
 ### Opera
 https://intercept-redirect.opera.bjornstar.com
-Opera has been struggling to get extensions reviewed and it may take over a week for a new version to be published.
+Generally available within a few days of a new release.
 
 ### Google Chrome
 https://intercept-redirect.chrome.bjornstar.com

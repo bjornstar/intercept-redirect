@@ -25,6 +25,7 @@
     "*://news.url.google.com/",
     "*://plus.url.google.com/",
     "*://www.google.com/",
+    "*://www.googleadservices.com/",
     "*://l.instagram.com/",
     "*://www.javlibrary.com/",
     "*://l.messenger.com/",
@@ -38,5 +39,5 @@
     "*://workable.com/",
     "*://www.youtube.com/"
   ],
-  "version": "5.1.2"
+  "version": "5.2.0"
 }

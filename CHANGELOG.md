@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v5.2.0 - 2020-05-04
+- Add support for `www.googleadservices.com` (Fixes #17)
+- Improve messaging for Opera
+
 ## v5.1.2 - 2020-04-28
 - Actually de-emphasize the Chrome Web Store in the README
 

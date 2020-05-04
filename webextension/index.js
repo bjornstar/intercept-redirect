@@ -56,6 +56,10 @@ const sites = {
     '/url': searchParam('url')
   },
   'www.google.com': googlePathnames,
+  //https://www.googleadservices.com/pagead/aclk?adurl=https://www.qoo10.jp/gmkt.inc/goods/goods.aspx%3Fgoodscode%3D765396631%26jaehuid%3D2026058773
+  'www.googleadservices.com': {
+    '/pagead/aclk': searchParam('adurl')
+  },
   'l.instagram.com': {
     '/': searchParam('u')
   },

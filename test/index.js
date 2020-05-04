@@ -28,6 +28,7 @@ const urls = [
   'https://www.google.com/imgres?imgurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.com/url?q=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.com/url?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://www.googleadservices.com/pagead/aclk?adurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.instagram.com/?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.javlibrary.com/en/redirect.php?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.messenger.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
