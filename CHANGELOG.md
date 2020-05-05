@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v5.2.1 - 2020-05-05
+- Add github actions to perform CI
+- Add AMO badge to the README (Addresses #16)
+
 ## v5.2.0 - 2020-05-04
 - Add support for `www.googleadservices.com` (Fixes #17)
 - Improve messaging for Opera
