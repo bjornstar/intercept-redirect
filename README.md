@@ -6,7 +6,8 @@
 [![Appveyor](https://ci.appveyor.com/api/projects/status/9qrj76bt914531gg/branch/master?svg=true)](https://ci.appveyor.com/project/bjornstar/intercept-redirect/branch/master)
 [![CircleCI](https://circleci.com/gh/bjornstar/intercept-redirect/tree/master.svg?style=svg)](https://circleci.com/gh/bjornstar/intercept-redirect/tree/master)
 
-[![Badge](https://img.shields.io/amo/v/intercept-redirect)](https://intercept-redirect.firefox.bjornstar.com)
+[![AMO Badge](https://img.shields.io/amo/v/intercept-redirect)](https://intercept-redirect.firefox.bjornstar.com)
+[![CWS Badge](https://img.shields.io/chrome-web-store/v/kdjmiebhgaleboaamnehjbamlghkoedf)](https://intercept-redirect.chrome.bjornstar.com)
 
 Skip tracking redirects that serve no purpose other than to waste your valuable time.
 

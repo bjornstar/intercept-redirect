@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v5.2.2 - 2020-05-15
+- Add a privacy policy: `PRIVACY.md`
+- Add a badge for CWS
+- Add a 300x300 icon for Microsoft Edge Addons Catalog
+
 ## v5.2.1 - 2020-05-05
 - Add github actions to perform CI
 - Add AMO badge to the README (Addresses #16)
