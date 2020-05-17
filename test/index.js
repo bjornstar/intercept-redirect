@@ -17,6 +17,7 @@ const urls = [
   'https://console.ebsta.com/linktracking/track.aspx?linkuri=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://exit.sc/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://l.facebook.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
+  'https://lm.facebook.com/l.php?u=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://gate.sc/?url=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.co.jp/imgres?imgrefurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',
   'https://www.google.co.jp/imgres?imgurl=https%3A%2F%2Fbjornstar.com%2Fintercept-redirect',

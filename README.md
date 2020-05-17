@@ -18,6 +18,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - console.ebsta.com
 - exit.sc
 - l.facebook.com
+- lm.facebook.com
 - gate.sc
 - www.google.co.jp
 - news.url.google.com

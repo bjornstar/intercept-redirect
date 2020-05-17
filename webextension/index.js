@@ -44,6 +44,10 @@ const sites = {
   'l.facebook.com': {
     '/l.php': searchParam('u')
   },
+  // 2020-05-17 - https://lm.facebook.com/l.php?u=https%3A%2F%2Fwww
+  'lm.facebook.com': {
+    '/l.php': searchParam('u')
+  },
   // 2019-08-06 - https://gate.sc/?url=http%3A%2F%2Ffanlink.to%2FPartial7&token=10fd54-1-1565068249069
   'gate.sc': {
     '/': searchParam('url')

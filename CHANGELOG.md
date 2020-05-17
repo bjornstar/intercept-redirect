@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v5.3.0 - 2020-05-17
+- Add support for `lm.facebook.com`
+
 ## v5.2.2 - 2020-05-15
 - Add a privacy policy: `PRIVACY.md`
 - Add a badge for CWS
