@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v5.3.1 - 2020-05-25
+- Add 16px and 48px icons as an attempt to appease the Google Chrome Web Store team
+
 ## v5.3.0 - 2020-05-17
 - Add support for `lm.facebook.com`
 

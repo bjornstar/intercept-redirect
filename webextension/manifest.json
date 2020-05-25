@@ -3,11 +3,13 @@
     "scripts": [ "index.js" ]
   },
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon128.png"
   },
   "description": "Skip tracking redirects that serve no purpose other than to waste your valuable time.",
   "icons": {
-    "128": "icon.png"
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
   "manifest_version": 2,
   "name": "Intercept Redirect",
@@ -40,5 +42,5 @@
     "*://workable.com/",
     "*://www.youtube.com/"
   ],
-  "version": "5.3.0"
+  "version": "5.3.1"
 }
