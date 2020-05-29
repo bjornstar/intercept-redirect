@@ -16,7 +16,7 @@ const extract = (url, value) => {
 const searchParam = key => ({ searchParams }) => searchParams.get(key);
 const decode = (s = '') => decodeURIComponent(s);
 const stripFromColon = (s = '') => s.substring(0, s.lastIndexOf(':'));
-const pickFromLastSlash = (s = '') => s.substring(s.lastIndexOf('/') + 1, s.length);
+const pickAfterHash = (s = '') => /^\/v1\/[0-9a-f]{64}\/(.*)/.exec(s)[1];
 
 const googlePathnames = {
   '/imgres': ({ searchParams }) => find(['imgurl','imgrefurl'], searchParams.get.bind(searchParams)),
@@ -75,7 +75,7 @@ const sites = {
   },
   // 2020-04-21 - https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/https%3A//developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns
   'outgoing.prod.mozaws.net': {
-    '/v1/': ({ pathname }) => decode(pickFromLastSlash(pathname))
+    '/v1/': ({ pathname }) => decode(pickAfterHash(pathname))
   },
   // 2020-04-13 - https://gcc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.metro.tokyo.lg.jp%2Fenglish%2Findex.html
   'gcc01.safelinks.protection.outlook.com': {

@@ -1,0 +1,11 @@
+Some websites use a redirect service to track outbound links. This puts an extra obfuscated hop between you and the destination of those links.
+
+This extension will intercept network requests on supported sites and instantly send you to the intended destination.
+
+For a list of domains that are supported by this extension, please visit https://github.com/bjornstar/intercept-redirect
+
+For Mozilla Firefox users - https://intercept-redirect.firefox.bjornstar.com
+
+For Mirosoft Edge users - https://intercept-redirect.edge.bjornstar.com
+
+For Opera users - https://intercept-redirect.opera.bjornstar.com

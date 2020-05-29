@@ -40,14 +40,9 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 
 ## Installation
 
-### Firefox
-https://intercept-redirect.firefox.bjornstar.com
-Mozilla has been very responsive and new versions are available immediately on the Mozilla Add-On site.
+Intercept Redirect is available for the following browsers:
 
-### Opera
-https://intercept-redirect.opera.bjornstar.com
-Generally available within a few days of a new release.
-
-### Google Chrome
-https://intercept-redirect.chrome.bjornstar.com
-Google has been refusing to publish new versions of this extension. The most recent version on the Chrome Web Store is v4.2.1 which was published in September of 2019.
+- Mozilla Firefox - https://intercept-redirect.firefox.bjornstar.com
+- Microsoft Edge - https://intercept-redirect.edge.bjornstar.com
+- Opera - https://intercept-redirect.opera.bjornstar.com
+- Google Chrome - https://intercept-redirect.chrome.bjornstar.com

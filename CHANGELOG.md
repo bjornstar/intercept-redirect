@@ -1,5 +1,12 @@
 # Intercept Redirect
 
+## v5.4.0 - 2020-05-29
+- Add a link to the Microsoft Edge version in the `README` (Fixes #23)
+- Add `special-google-chrome-web-store-description.txt` to assets
+- Redirect to the correct URL on `outgoing.prod.mozaws.net` when slashes are not url encoded (Fixes #22)
+- Update devDependency `eslint` from `v7.0.0` to `v7.1.0`
+- Update devDependency `mocha` from `v7.1.2` to `v7.2.0`
+
 ## v5.3.2 - 2020-05-29
 - Use the `icon-300` image from assets for the `README` (Fixes #21)
 
