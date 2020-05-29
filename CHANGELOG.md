@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v5.3.2 - 2020-05-29
+- Use the `icon-300` image from assets for the `README` (Fixes #21)
+
 ## v5.3.1 - 2020-05-25
 - Add 16px and 48px icons as an attempt to appease the Google Chrome Web Store team
 
