@@ -6,7 +6,7 @@
 - Add more languages for `javlibrary`
 - [`manifest.json`] Make URLs more specific
 - [Tests] Use a variable for the encoded URL to avoid copy/paste errors
-- [Tests] Use URL to extract the host intead doing it ourselves
+- [Tests] Use URL to extract the host instead of doing it ourselves
 - [Dependencies] Update mocha & eslint
 
 ## v5.4.0 - 2020-05-29
