@@ -41,12 +41,17 @@ const sites = {
   'exit.sc': {
     '/': searchParam('url')
   },
+  // 2020-09-17 - https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.bbc.com%2Ffuture%2Farticle%2F20200622-the-long-term-effects-of-covid-19-infection%3Focid%3Dww.social.link.facebook
   'l.facebook.com': {
     '/l.php': searchParam('u')
   },
   // 2020-05-17 - https://lm.facebook.com/l.php?u=https%3A%2F%2Fwww
   'lm.facebook.com': {
     '/l.php': searchParam('u')
+  },
+  // 2020-09-17 - https://m.facebook.com/flx/warn/?u=https%3A%2F%2Fwww.bbc.com%2Ffuture%2Farticle%2F20200622-the-long-term-effects-of-covid-19-infection%3Focid%3Dww.social.link.facebook
+  'm.facebook.com': {
+    '/flx/warn/': searchParam('u')
   },
   // 2019-08-06 - https://gate.sc/?url=http%3A%2F%2Ffanlink.to%2FPartial7&token=10fd54-1-1565068249069
   'gate.sc': {
@@ -68,7 +73,14 @@ const sites = {
     '/': searchParam('u')
   },
   'www.javlibrary.com': {
-    '/en/redirect.php': searchParam('url')
+    '/cn/redirect.php': searchParam('url'),
+    '/en/redirect.php': searchParam('url'),
+    '/ja/redirect.php': searchParam('url'),
+    '/tw/redirect.php': searchParam('url')
+  },
+  // 2020-09-17 - https://www.kraken.com/redirect?url=https%3A%2F%2Fcryptowat.ch%2F
+  'www.kraken.com': {
+    '/redirect': searchParam('url')
   },
   'l.messenger.com': {
     '/l.php': searchParam('u')

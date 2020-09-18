@@ -19,6 +19,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - exit.sc
 - l.facebook.com
 - lm.facebook.com
+- m.facebook.com
 - gate.sc
 - www.google.co.jp
 - news.url.google.com
@@ -27,6 +28,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - www.googleadservices.com
 - l.instagram.com
 - www.javlibrary.com
+- www.kraken.com
 - l.messenger.com
 - outgoing.prod.mozaws.net
 - gcc01.safelinks.protection.outlook.com

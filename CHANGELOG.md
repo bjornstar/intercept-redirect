@@ -1,5 +1,14 @@
 # Intercept Redirect
 
+## v6.0.0 - 2020-09-18
+- Add `https://m.facebook.com/flx/warn/`
+- Add `https://www.kraken.com/redirect`
+- Add more languages for `javlibrary`
+- [`manifest.json`] Make URLs more specific
+- [Tests] Use a variable for the encoded URL to avoid copy/paste errors
+- [Tests] Use URL to extract the host intead doing it ourselves
+- [Dependencies] Update mocha & eslint
+
 ## v5.4.0 - 2020-05-29
 - Add a link to the Microsoft Edge version in the `README` (Fixes #23)
 - Add `special-google-chrome-web-store-description.txt` to assets
