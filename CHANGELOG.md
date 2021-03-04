@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v7.0.0 - 2021-03-03
+- Add `https://href.li`
+- [Tests] Update tests to use strictEqual instead of equal
+
 ## v6.0.0 - 2020-09-18
 - Add `https://m.facebook.com/flx/warn/`
 - Add `https://www.kraken.com/redirect`

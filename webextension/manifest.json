@@ -32,6 +32,7 @@
     "*://www.google.com/imgres",
     "*://www.google.com/url",
     "*://www.googleadservices.com/pagead/aclk",
+    "*://href.li/",
     "*://l.instagram.com/",
     "*://www.javlibrary.com/cn/redirect.php",
     "*://www.javlibrary.com/en/redirect.php",
@@ -49,5 +50,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "6.0.0"
+  "version": "7.0.0"
 }

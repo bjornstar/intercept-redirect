@@ -35,6 +35,7 @@ const urls = [
   `https://www.google.com/url?q=${encodedURL}`,
   `https://www.google.com/url?url=${encodedURL}`,
   `https://www.googleadservices.com/pagead/aclk?adurl=${encodedURL}`,
+  `https://href.li/?${redirectUrl}`,
   `https://l.instagram.com/?u=${encodedURL}`,
   `https://www.javlibrary.com/cn/redirect.php?url=${encodedURL}`,
   `https://www.javlibrary.com/en/redirect.php?url=${encodedURL}`,
@@ -69,7 +70,7 @@ describe('analyzeURL', () => {
   describe('Each URL redirects to the correct location', () => {
     urls.forEach(url => {
       it(`url: ${url}`, () => {
-        assert.deepEqual(analyzeURL({ url }), { redirectUrl });
+        assert.deepStrictEqual(analyzeURL({ url }), { redirectUrl });
       });
     });
   });
@@ -127,7 +128,7 @@ describe('Packaging', () => {
   });
 
   it('Version number is the same in both the package and manifest', () => {
-    assert.equal(manifest.version, pkg.version);
+    assert.strictEqual(manifest.version, pkg.version);
   });
 
   it('The CHANGELOG has an entry for the current version', done => {
@@ -142,7 +143,7 @@ describe('Packaging', () => {
         const line = lines[i];
 
         if (versionRe.test(line)) {
-          assert.equal(line.indexOf(versionLine), 0, `Package: ${versionLine}, Latest CHANGELOG: ${line}`);
+          assert.strictEqual(line.indexOf(versionLine), 0, `Package: ${versionLine}, Latest CHANGELOG: ${line}`);
           return done();
         }
       }
@@ -184,18 +185,18 @@ describe('Packaging', () => {
 
 describe('Subdomain', () => {
   it('For supported domains returns *.domain', () => {
-    assert.equal(subdomain('foobar.digidip.net'), '*.digidip.net');
-    assert.equal(subdomain('foo.bar.digidip.net'), '*.digidip.net');
-    assert.equal(subdomain('wow.curseforge.com'), '*.curseforge.com');
+    assert.strictEqual(subdomain('foobar.digidip.net'), '*.digidip.net');
+    assert.strictEqual(subdomain('foo.bar.digidip.net'), '*.digidip.net');
+    assert.strictEqual(subdomain('wow.curseforge.com'), '*.curseforge.com');
   });
 
   it('Does not apply to domain host', () => {
-    assert.equal(subdomain('digidip.net'), 'digidip.net');
-    assert.equal(subdomain('curseforge.com'), 'curseforge.com');
+    assert.strictEqual(subdomain('digidip.net'), 'digidip.net');
+    assert.strictEqual(subdomain('curseforge.com'), 'curseforge.com');
   });
 
   it('Returns host when not supported', () => {
-    assert.equal(subdomain('intercept-redirect.bjornstar.com'), 'intercept-redirect.bjornstar.com');
-    assert.equal(subdomain('bjornstar.com'), 'bjornstar.com');
+    assert.strictEqual(subdomain('intercept-redirect.bjornstar.com'), 'intercept-redirect.bjornstar.com');
+    assert.strictEqual(subdomain('bjornstar.com'), 'bjornstar.com');
   });
 });

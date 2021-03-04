@@ -26,6 +26,7 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 - plus.url.google.com
 - www.google.com
 - www.googleadservices.com
+- href.li
 - l.instagram.com
 - www.javlibrary.com
 - www.kraken.com

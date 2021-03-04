@@ -69,6 +69,9 @@ const sites = {
   'www.googleadservices.com': {
     '/pagead/aclk': searchParam('adurl')
   },
+  'href.li': {
+    '/': ({ search }) => search.substring(1)
+  },
   'l.instagram.com': {
     '/': searchParam('u')
   },
