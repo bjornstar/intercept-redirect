@@ -1,6 +1,6 @@
 # Intercept Redirect
 
-![Intercept Redirect Logo](https://raw.github.com/bjornstar/intercept-redirect/master/assets/icon-300.png)
+[![Intercept Redirect Logo](https://intercept-redirect.bjornstar.com)](https://raw.github.com/bjornstar/intercept-redirect/master/assets/icon-300.png)
 
 [![Travis CI](https://travis-ci.org/bjornstar/intercept-redirect.svg?branch=master)](https://travis-ci.org/bjornstar/intercept-redirect)
 [![Appveyor](https://ci.appveyor.com/api/projects/status/9qrj76bt914531gg/branch/master?svg=true)](https://ci.appveyor.com/project/bjornstar/intercept-redirect/branch/master)
@@ -10,6 +10,8 @@
 [![CWS Badge](https://img.shields.io/chrome-web-store/v/kdjmiebhgaleboaamnehjbamlghkoedf)](https://intercept-redirect.chrome.bjornstar.com)
 
 Skip tracking redirects that serve no purpose other than to waste your valuable time.
+
+This extension does not modify any of the pages that you visit. It's sole purpose is to intercept network requests intended for redirect services. It requests the bare minimum of access to these domains to protect your privacy and have the best performance.
 
 ## Supported Domains
 - *.curseforge.com

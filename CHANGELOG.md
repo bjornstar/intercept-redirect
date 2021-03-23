@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v7.0.1 - 2021-03-24
+- [`README.md`] Add a better description and make the image link to the website
+- [`package.json`] npm now deletes empty dependencies
+- [`.npmignore`] Publish less extraneous data to npm
+
 ## v7.0.0 - 2021-03-03
 - Add `https://href.li`
 - [Tests] Update tests to use strictEqual instead of equal

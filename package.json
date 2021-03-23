@@ -1,9 +1,8 @@
 {
   "name": "@bjornstar/intercept-redirect",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Skip tracking redirects that serve no purpose other than to waste your valuable time.",
   "main": "webextension/index.js",
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^7.9.0",
     "mocha": "^8.1.3"
