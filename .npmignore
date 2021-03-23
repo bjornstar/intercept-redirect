@@ -1,6 +1,6 @@
 .appveyor.yml
 .circleci
-.eslintrc
+.eslintrc.json
 .github
 .travis.yml
 assets
