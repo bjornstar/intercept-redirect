@@ -1,6 +1,10 @@
 # Intercept Redirect
 
-## v7.0.2 - 2021-03.24
+## v7.1.0 - 2021-04-21
+- Add support for `t.lever-analytics.com`
+- [devDependencies] Update `mocha` & `eslint`
+
+## v7.0.2 - 2021-03-24
 - [`.npmignore`] It should be the filename with extension: `.eslintrc.json`
 
 ## v7.0.1 - 2021-03-24
@@ -19,7 +23,7 @@
 - [`manifest.json`] Make URLs more specific
 - [Tests] Use a variable for the encoded URL to avoid copy/paste errors
 - [Tests] Use URL to extract the host instead of doing it ourselves
-- [Dependencies] Update mocha & eslint
+- [devDependencies] Update mocha & eslint
 
 ## v5.4.0 - 2020-05-29
 - Add a link to the Microsoft Edge version in the `README` (Fixes #23)

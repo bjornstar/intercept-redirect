@@ -42,6 +42,7 @@ const urls = [
   `https://www.javlibrary.com/ja/redirect.php?url=${encodedURL}`,
   `https://www.javlibrary.com/tw/redirect.php?url=${encodedURL}`,
   `https://www.kraken.com/redirect?url=${encodedURL}`,
+  `https://t.lever-analytics.com/email-link?dest=${encodedURL}`,
   `https://l.messenger.com/l.php?u=${encodedURL}`,
   `https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/${encodedURL}`,
   'https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/https%3A//bjornstar.com/intercept-redirect', // https://github.com/bjornstar/intercept-redirect/issues/22

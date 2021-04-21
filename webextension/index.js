@@ -85,6 +85,10 @@ const sites = {
   'www.kraken.com': {
     '/redirect': searchParam('url')
   },
+  // 2021-04-21 - https://t.lever-analytics.com/email-link?dest=https%3A%2F%2Fgithub.com%2Fklarna
+  't.lever-analytics.com': {
+    '/email-link': searchParam('dest')
+  },
   'l.messenger.com': {
     '/l.php': searchParam('u')
   },

@@ -32,6 +32,7 @@ This extension does not modify any of the pages that you visit. It's sole purpos
 - l.instagram.com
 - www.javlibrary.com
 - www.kraken.com
+- t.lever-analytics.com
 - l.messenger.com
 - outgoing.prod.mozaws.net
 - gcc01.safelinks.protection.outlook.com
