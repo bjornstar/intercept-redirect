@@ -1,6 +1,6 @@
 # Intercept Redirect
 
-[![Intercept Redirect Logo](https://intercept-redirect.bjornstar.com)](https://raw.github.com/bjornstar/intercept-redirect/master/assets/icon-300.png)
+[![Intercept Redirect Logo](https://intercept-redirect.bjornstar.com)](https://raw.githubusercontent.com/bjornstar/intercept-redirect/master/assets/icon-300.png)
 
 [![Travis CI](https://travis-ci.org/bjornstar/intercept-redirect.svg?branch=master)](https://travis-ci.org/bjornstar/intercept-redirect)
 [![Appveyor](https://ci.appveyor.com/api/projects/status/9qrj76bt914531gg/branch/master?svg=true)](https://ci.appveyor.com/project/bjornstar/intercept-redirect/branch/master)
