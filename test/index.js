@@ -15,52 +15,57 @@ const redirectUrl = 'https://bjornstar.com/intercept-redirect';
 const encodedURL = encodeURIComponent(redirectUrl);
 
 const urls = [
-  `https://bjornstar.digidip.net/visit?url=${redirectUrl}`,
-  `https://wow.curseforge.com/linkout?remoteUrl=${encodeURIComponent(redirectUrl)}`, // curseforge double URI encodes
-  `https://disq.us/url?url=${redirectUrl}%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4`,
-  `https://console.ebsta.com/linktracking/track.aspx?linkuri=${encodedURL}`,
-  `https://exit.sc/?url=${encodedURL}`,
-  `https://l.facebook.com/l.php?u=${encodedURL}`,
-  `https://lm.facebook.com/l.php?u=${encodedURL}`,
-  `https://m.facebook.com/flx/warn/?u=${encodedURL}`,
-  `https://gate.sc/?url=${encodedURL}`,
-  `https://www.google.co.jp/imgres?imgrefurl=${encodedURL}`,
-  `https://www.google.co.jp/imgres?imgurl=${encodedURL}`,
-  `https://www.google.co.jp/url?q=${encodedURL}`,
-  `https://www.google.co.jp/url?url=${encodedURL}`,
-  `https://news.url.google.com/url?url=${encodedURL}`,
-  `https://plus.url.google.com/url?url=${encodedURL}`,
-  `https://www.google.com/imgres?imgrefurl=${encodedURL}`,
-  `https://www.google.com/imgres?imgurl=${encodedURL}`,
-  `https://www.google.com/url?q=${encodedURL}`,
-  `https://www.google.com/url?url=${encodedURL}`,
-  `https://www.googleadservices.com/pagead/aclk?adurl=${encodedURL}`,
-  `https://href.li/?${redirectUrl}`,
-  `https://l.instagram.com/?u=${encodedURL}`,
-  `https://www.javlibrary.com/cn/redirect.php?url=${encodedURL}`,
-  `https://www.javlibrary.com/en/redirect.php?url=${encodedURL}`,
-  `https://www.javlibrary.com/ja/redirect.php?url=${encodedURL}`,
-  `https://www.javlibrary.com/tw/redirect.php?url=${encodedURL}`,
-  `https://www.kraken.com/redirect?url=${encodedURL}`,
-  `https://t.lever-analytics.com/email-link?dest=${encodedURL}`,
-  `https://l.messenger.com/l.php?u=${encodedURL}`,
-  `https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/${encodedURL}`,
-  'https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/https%3A//bjornstar.com/intercept-redirect', // https://github.com/bjornstar/intercept-redirect/issues/22
-  `https://gcc01.safelinks.protection.outlook.com/?url=${encodedURL}`,
-  `https://slack-redir.net/link?url=${encodedURL}`,
-  `https://steamcommunity.com/linkfilter/?url=${encodedURL}`,
-  `https://twitter.com/i/redirect?url=${encodedURL}`,
-  `https://t.umblr.com/redirect?z=${encodedURL}`,
-  `https://vk.com/away.php?to=${encodedURL}`,
-  `https://workable.com/nr?l=${encodedURL}`,
-  `https://www.youtube.com/redirect?q=${encodedURL}`
+  { url: `https://bjornstar.digidip.net/visit?url=${redirectUrl}` },
+  // curseforge double URI encodes
+  { url: `https://wow.curseforge.com/linkout?remoteUrl=${encodeURIComponent(redirectUrl)}` },
+  { url: 'https://github-redirect.dependabot.com/bjornstar/intercept-redirect', redirectUrl: 'https://github.com/bjornstar/intercept-redirect' },
+  { url: `https://disq.us/url?url=${redirectUrl}%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4` },
+  { url: `https://console.ebsta.com/linktracking/track.aspx?linkuri=${encodedURL}` },
+  { url: `https://exit.sc/?url=${encodedURL}` },
+  { url: `https://l.facebook.com/l.php?u=${encodedURL}` },
+  { url: `https://lm.facebook.com/l.php?u=${encodedURL}` },
+  { url: `https://m.facebook.com/flx/warn/?u=${encodedURL}` },
+  { url: `https://gate.sc/?url=${encodedURL}` },
+  { url: `https://www.google.co.jp/imgres?imgrefurl=${encodedURL}` },
+  { url: `https://www.google.co.jp/imgres?imgurl=${encodedURL}` },
+  { url: `https://www.google.co.jp/url?q=${encodedURL}` },
+  { url: `https://www.google.co.jp/url?url=${encodedURL}` },
+  { url: `https://news.url.google.com/url?url=${encodedURL}` },
+  { url: `https://plus.url.google.com/url?url=${encodedURL}` },
+  { url: `https://www.google.com/imgres?imgrefurl=${encodedURL}` },
+  { url: `https://www.google.com/imgres?imgurl=${encodedURL}` },
+  { url: `https://www.google.com/url?q=${encodedURL}` },
+  { url: `https://www.google.com/url?url=${encodedURL}` },
+  { url: `https://www.googleadservices.com/pagead/aclk?adurl=${encodedURL}` },
+  { url: `https://href.li/?${redirectUrl}` },
+  { url: `https://l.instagram.com/?u=${encodedURL}` },
+  { url: `https://www.javlibrary.com/cn/redirect.php?url=${encodedURL}` },
+  { url: `https://www.javlibrary.com/en/redirect.php?url=${encodedURL}` },
+  { url: `https://www.javlibrary.com/ja/redirect.php?url=${encodedURL}` },
+  { url: `https://www.javlibrary.com/tw/redirect.php?url=${encodedURL}` },
+  { url: `https://www.kraken.com/redirect?url=${encodedURL}` },
+  { url: `https://t.lever-analytics.com/email-link?dest=${encodedURL}` },
+  { url: `https://l.messenger.com/l.php?u=${encodedURL}` },
+  { url: `https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/${encodedURL}` },
+  // https://github.com/bjornstar/intercept-redirect/issues/22
+  { url: 'https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/https%3A//bjornstar.com/intercept-redirect' },
+  { url: `https://gcc01.safelinks.protection.outlook.com/?url=${encodedURL}` },
+  { url: `https://slack-redir.net/link?url=${encodedURL}` },
+  { url: `https://steamcommunity.com/linkfilter/?url=${encodedURL}` },
+  // https://github.com/bjornstar/intercept-redirect/issues/12
+  { url: 'https://steamcommunity.com/linkfilter/?url=bjornstar.com/intercept-redirect' },
+  { url: `https://twitter.com/i/redirect?url=${encodedURL}` },
+  { url: `https://t.umblr.com/redirect?z=${encodedURL}` },
+  { url: `https://vk.com/away.php?to=${encodedURL}` },
+  { url: `https://workable.com/nr?l=${encodedURL}` },
+  { url: `https://www.youtube.com/redirect?q=${encodedURL}` }
 ];
 
 const manifestSites = manifest.permissions.filter(permission => {
   return permission !== 'webRequest' && permission !== 'webRequestBlocking';
 }).map(site => new URL(site.replace(/^\*:\/\//, 'https://')).host);
 
-const testSites = urls.map(url => {
+const testSites = urls.map(({ url }) => {
   const host = url.substring(8, url.indexOf('/', 8));
   return subdomain(host);
 });
@@ -69,20 +74,11 @@ const webExtensionSites = Object.keys(webExtension.sites);
 
 describe('analyzeURL', () => {
   describe('Each URL redirects to the correct location', () => {
-    urls.forEach(url => {
+    const expectedUrl = redirectUrl;
+    urls.forEach(({ redirectUrl = expectedUrl, url }) => {
       it(`url: ${url}`, () => {
         assert.deepStrictEqual(analyzeURL({ url }), { redirectUrl });
       });
-    });
-  });
-
-  describe('The redirect should begin with a protocol', () => {
-    it('https:// gets prepended if there is no protocol', () => {
-      const url = 'https://steamcommunity.com/linkfilter/?url=bjornstar.com';
-
-      const { redirectUrl } = analyzeURL({ url });
-
-      assert.strictEqual(redirectUrl.indexOf('https://'), 0);
     });
   });
 

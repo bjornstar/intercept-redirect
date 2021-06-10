@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v8.0.0 - 2021-06-10
+- Add `github-redirect.dependabot.com`
+- [Tests] Add support for arbitrary expected redirectURLs
+- [CI] Only test on node v16
+
 ## v7.1.0 - 2021-04-21
 - Add support for `t.lever-analytics.com`
 - [devDependencies] Update `mocha` & `eslint`
