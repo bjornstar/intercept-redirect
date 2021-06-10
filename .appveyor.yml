@@ -2,6 +2,7 @@ build: off
 
 environment:
   matrix:
+    # We can't update to node v16 yet -- https://github.com/appveyor/ci/issues/3684
     - nodejs_version: '14'
 
 install:

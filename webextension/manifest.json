@@ -17,6 +17,7 @@
     "webRequest",
     "webRequestBlocking",
     "*://*.curseforge.com/linkout",
+    "*://github-redirect.dependabot.com/",
     "*://*.digidip.net/visit",
     "*://disq.us/url",
     "*://console.ebsta.com/linktracking/track.aspx",
@@ -51,5 +52,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "7.1.0"
+  "version": "8.0.0"
 }

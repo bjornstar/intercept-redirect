@@ -15,6 +15,7 @@ This extension does not modify any of the pages that you visit. It's sole purpos
 
 ## Supported Domains
 - *.curseforge.com
+- github-redirect.dependabot.com
 - *.digidip.net
 - disq.us
 - console.ebsta.com

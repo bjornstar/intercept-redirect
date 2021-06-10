@@ -28,6 +28,10 @@ const sites = {
   '*.curseforge.com': {
     '/linkout': url => decode(searchParam('remoteUrl')(url))
   },
+  // 2021-06-10 -- https://github-redirect.dependabot.com/evanw/esbuild/pull/1338
+  'github-redirect.dependabot.com': {
+    '/': ({ pathname }) => `https://github.com${pathname}`
+  },
   '*.digidip.net': {
     '/visit': searchParam('url')
   },
