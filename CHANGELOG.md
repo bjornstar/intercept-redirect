@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v8.1.0 - 2021-10-05
+- Add `clickserve.dartsearch.net`
+
 ## v8.0.0 - 2021-06-10
 - Add `github-redirect.dependabot.com`
 - [Tests] Add support for arbitrary expected redirectURLs

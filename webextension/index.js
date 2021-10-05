@@ -28,6 +28,10 @@ const sites = {
   '*.curseforge.com': {
     '/linkout': url => decode(searchParam('remoteUrl')(url))
   },
+  // 2021-10-05 -- https://clickserve.dartsearch.net/link/click?ds_dest_url=https://www.newegg.com/logitech-k375s-multi-device-wireless-keyboard-and-stand-combo-920-008165-bluetooth-wireless/p/N82E16823126391?item=N82E16823126391
+  'clickserve.dartsearch.net': {
+    '/link/click': searchParam('ds_dest_url')
+  },
   // 2021-06-10 -- https://github-redirect.dependabot.com/evanw/esbuild/pull/1338
   'github-redirect.dependabot.com': {
     '/': ({ pathname }) => `https://github.com${pathname}`

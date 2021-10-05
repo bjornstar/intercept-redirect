@@ -18,6 +18,7 @@ const urls = [
   { url: `https://bjornstar.digidip.net/visit?url=${redirectUrl}` },
   // curseforge double URI encodes
   { url: `https://wow.curseforge.com/linkout?remoteUrl=${encodeURIComponent(redirectUrl)}` },
+  { url: `https://clickserve.dartsearch.net/link/click?ds_dest_url=${encodedURL}` },
   { url: 'https://github-redirect.dependabot.com/bjornstar/intercept-redirect', redirectUrl: 'https://github.com/bjornstar/intercept-redirect' },
   { url: `https://disq.us/url?url=${redirectUrl}%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4` },
   { url: `https://console.ebsta.com/linktracking/track.aspx?linkuri=${encodedURL}` },
