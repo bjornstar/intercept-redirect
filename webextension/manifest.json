@@ -32,6 +32,7 @@
     "*://news.url.google.com/url",
     "*://plus.url.google.com/url",
     "*://www.google.com/imgres",
+    "*://www.google.com/sorry/index",
     "*://www.google.com/url",
     "*://www.googleadservices.com/pagead/aclk",
     "*://href.li/",
@@ -53,5 +54,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.1.0"
+  "version": "8.2.0"
 }
