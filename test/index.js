@@ -35,6 +35,7 @@ const urls = [
   { url: `https://plus.url.google.com/url?url=${encodedURL}` },
   { url: `https://www.google.com/imgres?imgrefurl=${encodedURL}` },
   { url: `https://www.google.com/imgres?imgurl=${encodedURL}` },
+  { url: `https://www.google.com/sorry/index?continue=${encodedURL}`},
   { url: `https://www.google.com/url?q=${encodedURL}` },
   { url: `https://www.google.com/url?url=${encodedURL}` },
   { url: `https://www.googleadservices.com/pagead/aclk?adurl=${encodedURL}` },

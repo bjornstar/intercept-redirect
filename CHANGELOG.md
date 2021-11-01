@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v8.2.0 - 2021-11-01
+- Add `www.google.com/sorry/index`
+- [devDependencies] Update `eslint`
+- [`.gitignore`] Ignore `package-lock.json`
+
 ## v8.1.0 - 2021-10-05
 - Add `clickserve.dartsearch.net`
 

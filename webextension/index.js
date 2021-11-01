@@ -20,6 +20,8 @@ const pickAfterHash = (s = '') => /^\/v1\/[0-9a-f]{64}\/(.*)/.exec(s)[1];
 
 const googlePathnames = {
   '/imgres': ({ searchParams }) => find(['imgurl','imgrefurl'], searchParams.get.bind(searchParams)),
+  // 2021-11-01 -- https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DrOJ1cw6mohw&q=EgQNMPtfGMiMgIwGBhCGR-B7SS2l0Xark5Tx3zEkMgFy
+  '/sorry/index': searchParam('continue'),
   '/url': ({ searchParams }) => find(['q','url'], searchParams.get.bind(searchParams))
 };
 
