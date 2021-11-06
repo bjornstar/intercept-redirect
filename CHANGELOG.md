@@ -1,5 +1,11 @@
 # Intercept Redirect
 
+## v8.3.0 - 2021-11-06
+- Add `www.google.se`
+- Only redirect `sorry/index` from `google.com`
+- [devDependencies] Update `eslint` & `mocha`
+- [`README.md`] Fix a grammatical error
+
 ## v8.2.0 - 2021-11-01
 - Add `www.google.com/sorry/index`
 - [devDependencies] Update `eslint`
