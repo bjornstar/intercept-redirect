@@ -20,8 +20,6 @@ const pickAfterHash = (s = '') => /^\/v1\/[0-9a-f]{64}\/(.*)/.exec(s)[1];
 
 const googlePathnames = {
   '/imgres': ({ searchParams }) => find(['imgurl','imgrefurl'], searchParams.get.bind(searchParams)),
-  // 2021-11-01 -- https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DrOJ1cw6mohw&q=EgQNMPtfGMiMgIwGBhCGR-B7SS2l0Xark5Tx3zEkMgFy
-  '/sorry/index': searchParam('continue'),
   '/url': ({ searchParams }) => find(['q','url'], searchParams.get.bind(searchParams))
 };
 
@@ -74,7 +72,12 @@ const sites = {
   'plus.url.google.com': {
     '/url': searchParam('url')
   },
-  'www.google.com': googlePathnames,
+  'www.google.com': {
+    ...googlePathnames,
+    // 2021-11-01 -- https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DrOJ1cw6mohw&q=EgQNMPtfGMiMgIwGBhCGR-B7SS2l0Xark5Tx3zEkMgFy
+    '/sorry/index': searchParam('continue'),
+  },
+  'www.google.se': googlePathnames,
   //https://www.googleadservices.com/pagead/aclk?adurl=https://www.qoo10.jp/gmkt.inc/goods/goods.aspx%3Fgoodscode%3D765396631%26jaehuid%3D2026058773
   'www.googleadservices.com': {
     '/pagead/aclk': searchParam('adurl')

@@ -11,7 +11,7 @@
 
 Skip tracking redirects that serve no purpose other than to waste your valuable time.
 
-This extension does not modify any of the pages that you visit. It's sole purpose is to intercept network requests intended for redirect services. It requests the bare minimum of access to these domains to protect your privacy and have the best performance.
+This extension does not modify any of the pages that you visit. Its sole purpose is to intercept network requests intended for redirect services. It requests the bare minimum of access to these domains to protect your privacy and have the best performance.
 
 ## Supported Domains
 - *.curseforge.com
@@ -29,6 +29,7 @@ This extension does not modify any of the pages that you visit. It's sole purpos
 - news.url.google.com
 - plus.url.google.com
 - www.google.com
+- www.google.se
 - www.googleadservices.com
 - href.li
 - l.instagram.com

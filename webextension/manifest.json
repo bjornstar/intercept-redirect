@@ -34,6 +34,8 @@
     "*://www.google.com/imgres",
     "*://www.google.com/sorry/index",
     "*://www.google.com/url",
+    "*://www.google.com/imgres",
+    "*://www.google.se/url",
     "*://www.googleadservices.com/pagead/aclk",
     "*://href.li/",
     "*://l.instagram.com/",
@@ -54,5 +56,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.2.0"
+  "version": "8.3.0"
 }
