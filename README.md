@@ -38,6 +38,7 @@ This extension does not modify any of the pages that you visit. Its sole purpose
 - t.lever-analytics.com
 - l.messenger.com
 - outgoing.prod.mozaws.net
+- onlyfans.com
 - gcc01.safelinks.protection.outlook.com
 - slack-redir.net
 - steamcommunity.com
