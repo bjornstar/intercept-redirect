@@ -109,6 +109,9 @@ const sites = {
   'outgoing.prod.mozaws.net': {
     '/v1/': ({ pathname }) => decode(pickAfterHash(pathname))
   },
+  'onlyfans.com': {
+    '/away': searchParam('url')
+  },
   // 2020-04-13 - https://gcc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.metro.tokyo.lg.jp%2Fenglish%2Findex.html
   'gcc01.safelinks.protection.outlook.com': {
     '/': searchParam('url')

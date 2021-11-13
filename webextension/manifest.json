@@ -47,6 +47,7 @@
     "*://t.lever-analytics.com/email-link",
     "*://l.messenger.com/l.php",
     "*://outgoing.prod.mozaws.net/v1/*",
+    "*://onlyfans.com/away",
     "*://gcc01.safelinks.protection.outlook.com/",
     "*://slack-redir.net/link",
     "*://steamcommunity.com/linkfilter/",
@@ -56,5 +57,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.3.1"
+  "version": "8.4.0"
 }

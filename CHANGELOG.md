@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v8.4.0 - 2021-11-13
+- Add `onlyfans.com`
+- Add funding information
+
 ## v8.3.1 - 2021-11-06
 - Fix duplicate entry: 2nd `*://www.google.com/imgres` should have been `*://www.google.se/imgres`
 - [Tests] Start using `addons-linter`
