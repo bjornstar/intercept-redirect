@@ -94,6 +94,10 @@ const sites = {
     '/ja/redirect.php': searchParam('url'),
     '/tw/redirect.php': searchParam('url')
   },
+  // 2021-12-29 - https://r.klar.na/?to=https%3A%2F%2Fdisneyworld.disney.go.com%2F&channel=app.klarna.com&source=curatedList
+  'r.klar.na': {
+    '/': searchParam('to')
+  },
   // 2020-09-17 - https://www.kraken.com/redirect?url=https%3A%2F%2Fcryptowat.ch%2F
   'www.kraken.com': {
     '/redirect': searchParam('url')
