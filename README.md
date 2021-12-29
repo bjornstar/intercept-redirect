@@ -34,6 +34,7 @@ This extension does not modify any of the pages that you visit. Its sole purpose
 - href.li
 - l.instagram.com
 - www.javlibrary.com
+- r.klar.na
 - www.kraken.com
 - t.lever-analytics.com
 - l.messenger.com

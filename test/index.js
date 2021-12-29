@@ -49,6 +49,7 @@ const urls = [
   { url: `https://www.javlibrary.com/en/redirect.php?url=${encodedURL}` },
   { url: `https://www.javlibrary.com/ja/redirect.php?url=${encodedURL}` },
   { url: `https://www.javlibrary.com/tw/redirect.php?url=${encodedURL}` },
+  { url: `https://r.klar.na/?to=${encodedURL}` },
   { url: `https://www.kraken.com/redirect?url=${encodedURL}` },
   { url: `https://t.lever-analytics.com/email-link?dest=${encodedURL}` },
   { url: `https://l.messenger.com/l.php?u=${encodedURL}` },

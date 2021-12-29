@@ -43,6 +43,7 @@
     "*://www.javlibrary.com/en/redirect.php",
     "*://www.javlibrary.com/ja/redirect.php",
     "*://www.javlibrary.com/tw/redirect.php",
+    "*://r.klar.na/",
     "*://www.kraken.com/redirect",
     "*://t.lever-analytics.com/email-link",
     "*://l.messenger.com/l.php",
@@ -57,5 +58,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.4.0"
+  "version": "8.5.0"
 }

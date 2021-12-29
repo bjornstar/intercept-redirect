@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v8.5.0 - 2021-12-29
+- Add `r.klar.na`
+
 ## v8.4.0 - 2021-11-13
 - Add `onlyfans.com`
 - Add funding information
