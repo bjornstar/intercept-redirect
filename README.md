@@ -14,11 +14,13 @@ Skip tracking redirects that serve no purpose other than to waste your valuable 
 This extension does not modify any of the pages that you visit. Its sole purpose is to intercept network requests intended for redirect services. It requests the bare minimum of access to these domains to protect your privacy and have the best performance.
 
 ## Supported Domains
+- c212.net
 - *.curseforge.com
 - clickserve.dartsearch.net
 - github-redirect.dependabot.com
 - *.digidip.net
 - disq.us
+- cj.dotomi.com
 - console.ebsta.com
 - exit.sc
 - l.facebook.com

@@ -16,11 +16,13 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "*://c212.net/c/link",
     "*://*.curseforge.com/linkout",
     "*://clickserve.dartsearch.net/link/click",
     "*://github-redirect.dependabot.com/",
     "*://*.digidip.net/visit",
     "*://disq.us/url",
+    "*://cj.dotomi.com/links-t/*",
     "*://console.ebsta.com/linktracking/track.aspx",
     "*://exit.sc/",
     "*://l.facebook.com/l.php",
@@ -58,5 +60,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.5.0"
+  "version": "8.6.0"
 }
