@@ -15,12 +15,14 @@ const redirectUrl = 'https://bjornstar.com/intercept-redirect';
 const encodedURL = encodeURIComponent(redirectUrl);
 
 const urls = [
-  { url: `https://bjornstar.digidip.net/visit?url=${redirectUrl}` },
+  { url: `https://c212.net/c/link/?u=${redirectUrl}`},
   // curseforge double URI encodes
   { url: `https://wow.curseforge.com/linkout?remoteUrl=${encodeURIComponent(redirectUrl)}` },
   { url: `https://clickserve.dartsearch.net/link/click?ds_dest_url=${encodedURL}` },
   { url: 'https://github-redirect.dependabot.com/bjornstar/intercept-redirect', redirectUrl: 'https://github.com/bjornstar/intercept-redirect' },
+  { url: `https://bjornstar.digidip.net/visit?url=${redirectUrl}` },
   { url: `https://disq.us/url?url=${redirectUrl}%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4` },
+  { url: `https://cj.dotomi.com/links-t/8961927/type/dlg/sid/wtbs_61d0bb4f5c0a800d5c6d18c7/${redirectUrl}`},
   { url: `https://console.ebsta.com/linktracking/track.aspx?linkuri=${encodedURL}` },
   { url: `https://exit.sc/?url=${encodedURL}` },
   { url: `https://l.facebook.com/l.php?u=${encodedURL}` },

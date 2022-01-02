@@ -17,6 +17,7 @@ const searchParam = key => ({ searchParams }) => searchParams.get(key);
 const decode = (s = '') => decodeURIComponent(s);
 const stripFromColon = (s = '') => s.substring(0, s.lastIndexOf(':'));
 const pickAfterHash = (s = '') => /^\/v1\/[0-9a-f]{64}\/(.*)/.exec(s)[1];
+const dotomi = (s = '') => /^\/links-t\/\d+\/\w+\/\w+\/\w+\/\w+_[0-9a-f]{24}\/(.*)/.exec(s)[1];
 
 const googlePathnames = {
   '/imgres': ({ searchParams }) => find(['imgurl','imgrefurl'], searchParams.get.bind(searchParams)),
@@ -24,6 +25,10 @@ const googlePathnames = {
 };
 
 const sites = {
+  // 2022-01-02 -- https://c212.net/c/link/?t=0&l=en&o=2997076-1&h=288952320&u=http%3A%2F%2Fcreatorkit.com%2Ftop-nine-best-of-2020&a=CreatorKit.com%2FTopNine
+  'c212.net': {
+    '/c/link': searchParam('u')
+  },
   // 2018-08-19 -- https://wow.curseforge.com/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252f1AjSgEH.png
   '*.curseforge.com': {
     '/linkout': url => decode(searchParam('remoteUrl')(url))
@@ -41,6 +46,10 @@ const sites = {
   },
   'disq.us': {
     '/url': url => stripFromColon(searchParam('url')(url))
+  },
+  // 2022-01-02 -- https://cj.dotomi.com/links-t/8961927/type/dlg/sid/wtbs_61d0bb4f5c0a800d5c6d18c7/https://www.staples.com/APC-Back-UPS-Pro-Compact-Tower-1500VA-UPS-Battery-Backup-Surge-Protector-BX1500M/product_2724589
+  'cj.dotomi.com': {
+    '/links-t': ({ pathname }) => dotomi(pathname)
   },
   // 2019-09-17 -- https://console.ebsta.com/linktracking/track.aspx?trackid=3a096df7-b279-43a5-b42c-cbda7b72759c-1568686588593&linktrackingid=2&linkuri=https%3A%2F%2Fen-jp.wantedly.com%2Fprojects%2F328561
   'console.ebsta.com': {

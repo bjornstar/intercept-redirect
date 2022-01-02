@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v8.6.0 - 2022-01-02
+- Add `c212.net`
+- Add `cj.dotomi.com`
+
 ## v8.5.0 - 2021-12-29
 - Add `r.klar.na`
 
