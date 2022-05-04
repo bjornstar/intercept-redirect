@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v8.7.0 - 2022-05-04
+- Add `facebook.com`
+- Add `redirect.epicgames.com`
+
 ## v8.6.0 - 2022-01-02
 - Add `c212.net`
 - Add `cj.dotomi.com`

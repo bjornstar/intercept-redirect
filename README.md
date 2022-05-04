@@ -22,7 +22,9 @@ This extension does not modify any of the pages that you visit. Its sole purpose
 - disq.us
 - cj.dotomi.com
 - console.ebsta.com
+- redirect.epicgames.com
 - exit.sc
+- facebook.com
 - l.facebook.com
 - lm.facebook.com
 - m.facebook.com
