@@ -24,7 +24,9 @@
     "*://disq.us/url",
     "*://cj.dotomi.com/links-t/*",
     "*://console.ebsta.com/linktracking/track.aspx",
+    "*://redirect.epicgames.com/*",
     "*://exit.sc/",
+    "*://facebook.com/flx/warn/",
     "*://l.facebook.com/l.php",
     "*://lm.facebook.com/l.php",
     "*://m.facebook.com/flx/warn/",
@@ -60,5 +62,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.6.0"
+  "version": "8.7.0"
 }

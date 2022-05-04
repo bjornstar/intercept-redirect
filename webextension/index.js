@@ -55,8 +55,16 @@ const sites = {
   'console.ebsta.com': {
     '/linktracking/track.aspx': searchParam('linkuri')
   },
+  // 2022-05-04 - https://redirect.epicgames.com/en/?redirectTo=https%3A%2F%2Ftwitter.com%2FmiHoYoDesktop
+  'redirect.epicgames.com': {
+    '/': searchParam('redirectTo')
+  },
   'exit.sc': {
     '/': searchParam('url')
+  },
+  // 2022-05-04 - https://www.facebook.com/flx/warn/?u=https%3A%2F%2Fplayoverwatch.com%2Fen-us%2Fnews%2F23801625%2Foverwatch-2-pvp-beta-week-1-developer-blog%2F
+  'facebook.com': {
+    '/flx/warn/': searchParam('u')
   },
   // 2020-09-17 - https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.bbc.com%2Ffuture%2Farticle%2F20200622-the-long-term-effects-of-covid-19-infection%3Focid%3Dww.social.link.facebook
   'l.facebook.com': {
