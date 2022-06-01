@@ -56,6 +56,7 @@ const urls = [
   { url: `https://r.klar.na/?to=${encodedURL}` },
   { url: `https://www.kraken.com/redirect?url=${encodedURL}` },
   { url: `https://t.lever-analytics.com/email-link?dest=${encodedURL}` },
+  { url: `https://www.linkedin.com/safety/go?url=${encodedURL}` },
   { url: `https://l.messenger.com/l.php?u=${encodedURL}` },
   { url: `https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/${encodedURL}` },
   // https://github.com/bjornstar/intercept-redirect/issues/22

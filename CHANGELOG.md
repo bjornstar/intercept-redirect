@@ -1,5 +1,8 @@
 # Intercept Redirect
 
+## v8.8.0 - 2022-06-01
+- Add `linkedin.com`
+
 ## v8.7.0 - 2022-05-04
 - Add `facebook.com`
 - Add `redirect.epicgames.com`
