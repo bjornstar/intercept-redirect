@@ -41,6 +41,7 @@ This extension does not modify any of the pages that you visit. Its sole purpose
 - r.klar.na
 - www.kraken.com
 - t.lever-analytics.com
+- www.linkedin.com
 - l.messenger.com
 - outgoing.prod.mozaws.net
 - onlyfans.com

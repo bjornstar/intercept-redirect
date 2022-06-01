@@ -50,6 +50,7 @@
     "*://r.klar.na/",
     "*://www.kraken.com/redirect",
     "*://t.lever-analytics.com/email-link",
+    "*://www.linkedin.com/safety/go",
     "*://l.messenger.com/l.php",
     "*://outgoing.prod.mozaws.net/v1/*",
     "*://onlyfans.com/away",
@@ -62,5 +63,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.7.0"
+  "version": "8.8.0"
 }

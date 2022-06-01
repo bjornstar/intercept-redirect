@@ -123,6 +123,10 @@ const sites = {
   't.lever-analytics.com': {
     '/email-link': searchParam('dest')
   },
+  // 2022-06-01 - https://www.linkedin.com/safety/go?url=https%3A%2F%2Fchoco.com%2Fus%2Fstories%2Flife-at-choco%2Fengineering-managers
+  'www.linkedin.com': {
+    '/safety/go': searchParam('url')
+  },
   'l.messenger.com': {
     '/l.php': searchParam('u')
   },
