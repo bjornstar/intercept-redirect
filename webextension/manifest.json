@@ -54,7 +54,7 @@
     "*://l.messenger.com/l.php",
     "*://outgoing.prod.mozaws.net/v1/*",
     "*://onlyfans.com/away",
-    "*://gcc01.safelinks.protection.outlook.com/",
+    "*://*.safelinks.protection.outlook.com/",
     "*://slack-redir.net/link",
     "*://steamcommunity.com/linkfilter/",
     "*://twitter.com/i/redirect",
@@ -63,5 +63,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.8.0"
+  "version": "8.9.0"
 }

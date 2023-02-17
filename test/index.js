@@ -62,6 +62,7 @@ const urls = [
   // https://github.com/bjornstar/intercept-redirect/issues/22
   { url: 'https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/https%3A//bjornstar.com/intercept-redirect' },
   { url: `https://onlyfans.com/away?url=${encodedURL}` },
+  { url: `https://eur03.safelinks.protection.outlook.com/?url=${encodedURL}` },
   { url: `https://gcc01.safelinks.protection.outlook.com/?url=${encodedURL}` },
   { url: `https://slack-redir.net/link?url=${encodedURL}` },
   { url: `https://steamcommunity.com/linkfilter/?url=${encodedURL}` },
@@ -195,14 +196,16 @@ describe('Packaging', () => {
 
 describe('Subdomain', () => {
   it('For supported domains returns *.domain', () => {
+    assert.strictEqual(subdomain('wow.curseforge.com'), '*.curseforge.com');
     assert.strictEqual(subdomain('foobar.digidip.net'), '*.digidip.net');
     assert.strictEqual(subdomain('foo.bar.digidip.net'), '*.digidip.net');
-    assert.strictEqual(subdomain('wow.curseforge.com'), '*.curseforge.com');
+    assert.strictEqual(subdomain('bjo01.safelinks.protection.outlook.com'), '*.safelinks.protection.outlook.com');
   });
 
   it('Does not apply to domain host', () => {
     assert.strictEqual(subdomain('digidip.net'), 'digidip.net');
     assert.strictEqual(subdomain('curseforge.com'), 'curseforge.com');
+    assert.strictEqual(subdomain('safelinks.protection.outlook.com'), 'safelinks.protection.outlook.com');
   });
 
   it('Returns host when not supported', () => {

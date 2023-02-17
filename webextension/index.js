@@ -138,7 +138,8 @@ const sites = {
     '/away': searchParam('url')
   },
   // 2020-04-13 - https://gcc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.metro.tokyo.lg.jp%2Fenglish%2Findex.html
-  'gcc01.safelinks.protection.outlook.com': {
+  // 2022-07-25 - https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbjornstar.com&sdata=abcdefg&reserved=0
+  '*.safelinks.protection.outlook.com': {
     '/': searchParam('url')
   },
   'slack-redir.net': {
@@ -164,23 +165,13 @@ const sites = {
   }
 };
 
-const domains = [
-  'curseforge.com',
-  'digidip.net'
-];
+const subdomains = Object.keys(sites)
+  .filter(site => site.startsWith('*'))
+  .map(site => site.replace(/^\*\./, ''));
 
 function subdomain(host) {
-  const hostLength = host.length;
-
-  for (let i = 0; i < domains.length; i += 1) {
-    const domain = domains[i];
-    const expectedIndex = hostLength - domain.length;
-
-    if (expectedIndex > 0 && host.lastIndexOf(domain) === expectedIndex) {
-      return `*.${domain}`;
-    }
-  }
-  return host;
+  const [domain] = subdomains.filter(s => host.endsWith(s));
+  return (domain && domain !== host) ? `*.${domain}` : host;
 }
 
 function reduceSites(urls, host) {
