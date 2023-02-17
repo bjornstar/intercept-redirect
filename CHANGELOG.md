@@ -1,5 +1,12 @@
 # Intercept Redirect
 
+## v8.9.0 - 2023-02-17
+- Handle all subdomains of `safelinks.protection.outlook.com`
+- Improve logic for handling subdomains
+- [.circleci] Use node v18
+- [.github/workflows] Use node v18
+- [devDependencies] Update `addons-linter`, `eslint`, and `mocha`
+
 ## v8.8.0 - 2022-06-01
 - Add `linkedin.com`
 
