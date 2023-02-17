@@ -3,7 +3,7 @@ version: 2
 jobs:
   Install Dependencies:
     docker:
-      - image: "circleci/node:18"
+      - image: "cimg/node:lts"
     steps:
       - checkout
       - run: "npm install"
@@ -14,7 +14,7 @@ jobs:
 
   Lint:
     docker:
-      - image: "circleci/node:18"
+      - image: "cimg/node:lts"
     steps:
       - checkout
       - restore_cache:
@@ -27,7 +27,7 @@ jobs:
 
   Mocha:
     docker:
-      - image: "circleci/node:18"
+      - image: "cimg/node:lts"
     steps:
       - checkout
       - restore_cache:
