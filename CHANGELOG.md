@@ -3,6 +3,7 @@
 ## v8.9.0 - 2023-02-17
 - Handle all subdomains of `safelinks.protection.outlook.com`
 - Improve logic for handling subdomains
+- [.appveyor] Use node v18
 - [.circleci] Use node `lts` on "next-gen" Docker image
 - [.github/workflows] Use node v18
 - [.travis] Remove travis-ci config
