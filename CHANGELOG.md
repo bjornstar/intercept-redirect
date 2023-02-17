@@ -5,6 +5,7 @@
 - Improve logic for handling subdomains
 - [.circleci] Use node `lts` on "next-gen" Docker image
 - [.github/workflows] Use node v18
+- [.travis] Remove travis-ci config
 - [devDependencies] Update `addons-linter`, `eslint`, and `mocha`
 
 ## v8.8.0 - 2022-06-01
