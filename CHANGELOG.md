@@ -6,6 +6,7 @@
 - [.appveyor] Use node v18
 - [.circleci] Use node `lts` on "next-gen" Docker image
 - [.github/workflows] Use node v18
+- [.github/workflows] Update actions versions
 - [.travis] Remove travis-ci config
 - [devDependencies] Update `addons-linter`, `eslint`, and `mocha`
 
