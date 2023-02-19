@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v9.0.0 - 2023-02-19
+- Switch to manifest v3
+- [.gitignore] Add `_metadata`, which Chrome unexpectedly creates inside our webextension source directory
+- [build.sh] Exclude `_metadata` from bundle
+
 ## v8.9.0 - 2023-02-17
 - Handle all subdomains of `safelinks.protection.outlook.com`
 - Improve logic for handling subdomains
