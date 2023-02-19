@@ -1,12 +1,6 @@
-// URL polyfill
-const URL = typeof window === 'object' ? window.URL : require('url').URL;
-
 const matchPatternToRegex = mp => `^${mp.replace(/\./, '\\.').replace(/\*/, '.*')}`;
 
-const ensureProtocol = s => {
-  const prepend = /^.*:\/\//.test(s) ? '' : 'https://';
-  return `${prepend}${s}`;
-};
+const ensureProtocol = (s = '') => s ? `${/^.*:\/\//.test(s) ? '' : 'https://'}${s}` : s;
 
 const extract = (url, value) => {
   const re = new RegExp(matchPatternToRegex(url));
@@ -174,14 +168,6 @@ function subdomain(host) {
   return (domain && domain !== host) ? `*.${domain}` : host;
 }
 
-function reduceSites(urls, host) {
-  return urls.concat(Object.keys(sites[host]).map(pathname => {
-    return `*://${host}${pathname}*`;
-  }));
-}
-
-const urls = Object.keys(sites).reduce(reduceSites, []);
-
 const redirectExtractors = Object.keys(sites).reduce((siteExtractors, site) => {
   siteExtractors[site] = Object.keys(sites[site]).reduce((pathExtractors, path) => {
     const value = sites[site][path];
@@ -202,8 +188,8 @@ function find(a, b) {
   }
 }
 
-function analyzeURL(request) {
-  const url = new URL(request.url);
+function analyzeURL(urlString) {
+  const url = new URL(urlString);
   const host = subdomain(url.host);
 
   const site = sites[host];
@@ -212,13 +198,13 @@ function analyzeURL(request) {
     return;
   }
 
-  const redirectUrl = find(redirectExtractors[host], url);
-
-  return redirectUrl && { redirectUrl: ensureProtocol(redirectUrl) };
+  return ensureProtocol(find(redirectExtractors[host], url));
 }
 
-// Only runs in the browser
-typeof chrome === 'object' && chrome.webRequest.onBeforeRequest.addListener(analyzeURL, { urls }, ['blocking']);
+if (typeof location === 'object') {
+  const redirectUrl = analyzeURL(new URL(location.href).hash.substring(1));
+  if (redirectUrl) location.href = redirectUrl;
+}
 
 typeof exports === 'object' && Object.assign(exports, {
   analyzeURL,

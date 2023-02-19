@@ -3,3 +3,4 @@ node_modules
 package-lock.json
 reports
 .DS_Store
+_metadata

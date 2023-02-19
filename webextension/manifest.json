@@ -1,21 +1,13 @@
 {
-  "background": {
-    "scripts": [ "index.js" ]
-  },
-  "browser_action": {
-    "default_icon": "icon128.png"
+  "declarative_net_request": {
+    "rule_resources": [{
+      "enabled": true,
+      "id": "rule_resource_id_1",
+      "path": "rules.json"
+    }]
   },
   "description": "Skip tracking redirects that serve no purpose other than to waste your valuable time.",
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
-  "manifest_version": 2,
-  "name": "Intercept Redirect",
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
+  "host_permissions": [
     "*://c212.net/c/link",
     "*://*.curseforge.com/linkout",
     "*://clickserve.dartsearch.net/link/click",
@@ -63,5 +55,15 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.9.0"
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 3,
+  "name": "Intercept Redirect",
+  "permissions": [
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "version": "9.0.0"
 }

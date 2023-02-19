@@ -1,0 +1,23 @@
+[{
+  "action": {
+    "redirect": { "regexSubstitution": "chrome-extension://hmdinklobabnfkinfkifekokoijhpjbe/index.html#\\0" },
+    "type": "redirect"
+  },
+  "condition": {
+    "regexFilter": "https://redirect.epicgames.com",
+    "requestDomains": ["redirect.epicgames.com"],
+    "resourceTypes": ["main_frame"]
+  },
+  "id": 1
+}, {
+  "action": {
+    "redirect": { "regexSubstitution": "chrome-extension://hmdinklobabnfkinfkifekokoijhpjbe/index.html#\\0" },
+    "type": "redirect"
+  },
+  "condition": {
+    "regexFilter": "https://www.youtube.com/redirect",
+    "requestDomains": ["www.youtube.com"],
+    "resourceTypes": ["main_frame"]
+  },
+  "id": 2
+}]

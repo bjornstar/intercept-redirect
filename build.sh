@@ -5,5 +5,5 @@ VERSION=$1
 echo "Building Intercept Redirect $VERSION"
 
 cd webextension
-zip ../build/intercept-redirect-$VERSION.zip ./* -r -9
+zip ../build/intercept-redirect-$VERSION.zip ./* -r -9 -x "_metadata/*"
 cd ..

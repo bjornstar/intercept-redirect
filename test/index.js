@@ -2,7 +2,6 @@ const assert = require('assert');
 const fs = require('fs');
 const mocha = require('mocha');
 const path = require('path');
-const { URL } = require('url');
 
 const webExtension = require('../webextension');
 const manifest = require('../webextension/manifest.json');
@@ -75,9 +74,7 @@ const urls = [
   { url: `https://www.youtube.com/redirect?q=${encodedURL}` }
 ];
 
-const manifestSites = manifest.permissions.filter(permission => {
-  return permission !== 'webRequest' && permission !== 'webRequestBlocking';
-}).map(site => new URL(site.replace(/^\*:\/\//, 'https://')).host);
+const manifestSites = manifest.host_permissions.map(site => new URL(site.replace(/^\*:\/\//, 'https://')).host);
 
 const testSites = urls.map(({ url }) => {
   const host = url.substring(8, url.indexOf('/', 8));
@@ -91,7 +88,7 @@ describe('analyzeURL', () => {
     const expectedUrl = redirectUrl;
     urls.forEach(({ redirectUrl = expectedUrl, url }) => {
       it(`url: ${url}`, () => {
-        assert.deepStrictEqual(analyzeURL({ url }), { redirectUrl });
+        assert.strictEqual(analyzeURL(url), redirectUrl);
       });
     });
   });
@@ -100,7 +97,7 @@ describe('analyzeURL', () => {
     const url = 'https://www.google.com/';
 
     it(`url: ${url}`, () => {
-      assert.ok(!analyzeURL({ url }));
+      assert.ok(!analyzeURL(url));
     });
   });
 
@@ -108,7 +105,7 @@ describe('analyzeURL', () => {
     const url = 'https://bjornstar.com/';
 
     it(`url: ${url}`, () => {
-      assert.ok(!analyzeURL({ url }));
+      assert.ok(!analyzeURL(url));
     });
   });
 });
