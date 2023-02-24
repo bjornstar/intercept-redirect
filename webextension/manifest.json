@@ -50,9 +50,12 @@
     "*://r.klar.na/",
     "*://www.kraken.com/redirect",
     "*://t.lever-analytics.com/email-link",
+    "*://www.linkedin.com/redir/redirect",
     "*://www.linkedin.com/safety/go",
     "*://l.messenger.com/l.php",
     "*://outgoing.prod.mozaws.net/v1/*",
+    "*://prod.outgoing.prod.webservices.mozgcp.net/v1/*",
+    "*://static.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html",
     "*://onlyfans.com/away",
     "*://*.safelinks.protection.outlook.com/",
     "*://slack-redir.net/link",
@@ -63,5 +66,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.9.0"
+  "version": "8.10.0"
 }

@@ -44,6 +44,8 @@ This extension does not modify any of the pages that you visit. Its sole purpose
 - www.linkedin.com
 - l.messenger.com
 - outgoing.prod.mozaws.net
+- prod.outgoing.prod.webservices.mozgcp.net
+- static.teams.cdn.office.net
 - onlyfans.com
 - *.safelinks.protection.outlook.com
 - slack-redir.net

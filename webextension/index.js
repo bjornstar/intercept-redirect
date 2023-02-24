@@ -124,7 +124,9 @@ const sites = {
     '/email-link': searchParam('dest')
   },
   // 2022-06-01 - https://www.linkedin.com/safety/go?url=https%3A%2F%2Fchoco.com%2Fus%2Fstories%2Flife-at-choco%2Fengineering-managers
+  // 2023-02-24 - https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fwww%2Epopdaily%2Ecom%2Etw%2F&urlhash=KIy6&trk=about_website
   'www.linkedin.com': {
+    '/redir/redirect': searchParam('url'),
     '/safety/go': searchParam('url')
   },
   'l.messenger.com': {
@@ -133,6 +135,14 @@ const sites = {
   // 2020-04-21 - https://outgoing.prod.mozaws.net/v1/08aa3089688d4b6ec460e6c402e78eba305c36fb81287197e4ae3f5a5c60f22d/https%3A//developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns
   'outgoing.prod.mozaws.net': {
     '/v1/': ({ pathname }) => decode(pickAfterHash(pathname))
+  },
+  // 2023-02-24 - https://prod.outgoing.prod.webservices.mozgcp.net/v1/7176181ce0be365332182027434f1c97339ca065a8806d89da8aa656385edcee/https%3A//intercept-redirect.github.bjornstar.com
+  'prod.outgoing.prod.webservices.mozgcp.net': {
+    '/v1/': ({ pathname }) => decode(pickAfterHash(pathname))
+  },
+  // 2023-02-24 - https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html?url=https%3A%2F%2Fnoise.getoto.net
+  'static.teams.cdn.office.net': {
+    '/evergreen-assets/safelinks/1/atp-safelinks.html': searchParam('url')
   },
   'onlyfans.com': {
     '/away': searchParam('url')
