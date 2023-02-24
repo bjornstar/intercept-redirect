@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v8.10.0 - 2023-02-24
+- Add `linkedin.com/redir/redirect` (Fixes #50)
+- Add `prod.outgoing.prod.webservices.mozgcp.net/v1/` (Fixes #51)
+- Add `statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks` (Fixes #49)
+
 ## v8.9.0 - 2023-02-17
 - Handle all subdomains of `safelinks.protection.outlook.com`
 - Improve logic for handling subdomains
