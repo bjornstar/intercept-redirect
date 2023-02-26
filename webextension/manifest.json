@@ -60,11 +60,12 @@
     "*://*.safelinks.protection.outlook.com/",
     "*://slack-redir.net/link",
     "*://steamcommunity.com/linkfilter/",
+    "*://www.tiktok.com/link/v2",
     "*://twitter.com/i/redirect",
     "*://t.umblr.com/redirect",
     "*://vk.com/away.php",
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.10.0"
+  "version": "8.11.0"
 }

@@ -50,6 +50,7 @@ This extension does not modify any of the pages that you visit. Its sole purpose
 - *.safelinks.protection.outlook.com
 - slack-redir.net
 - steamcommunity.com
+- www.tiktok.com
 - twitter.com
 - t.umblr.com
 - vk.com
