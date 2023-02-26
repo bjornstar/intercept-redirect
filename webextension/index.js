@@ -158,6 +158,10 @@ const sites = {
   'steamcommunity.com': {
     '/linkfilter/': searchParam('url')
   },
+  // 2023-02-26 - https://www.tiktok.com/link/v2?aid=1988&lang=en&scene=bio_url&target=bjornstar.com%2Fintercept-redirect
+  'www.tiktok.com': {
+    '/link/v2': searchParam('target')
+  },
   'twitter.com': {
     '/i/redirect': searchParam('url')
   },

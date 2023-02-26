@@ -1,5 +1,9 @@
 # Intercept Redirect
 
+## v8.11.0 - 2023-02-26
+- Add `tiktok.com`
+- [package.json] Align with add-on listing
+
 ## v8.10.0 - 2023-02-24
 - Add `linkedin.com/redir/redirect` (Fixes #50)
 - Add `prod.outgoing.prod.webservices.mozgcp.net/v1/` (Fixes #51)
