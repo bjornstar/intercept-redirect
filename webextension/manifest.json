@@ -16,6 +16,8 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "*://bhpz.adj.st/",
+    "*://app.adjust.com/jsr",
     "*://c212.net/c/link",
     "*://*.curseforge.com/linkout",
     "*://clickserve.dartsearch.net/link/click",
@@ -61,11 +63,12 @@
     "*://slack-redir.net/link",
     "*://steamcommunity.com/linkfilter/",
     "*://www.tiktok.com/link/v2",
+    "*://toyhou.se/~r",
     "*://twitter.com/i/redirect",
     "*://t.umblr.com/redirect",
     "*://vk.com/away.php",
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.11.0"
+  "version": "8.12.0"
 }

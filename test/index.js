@@ -15,16 +15,18 @@ const redirectUrl = 'https://bjornstar.com/intercept-redirect';
 const encodedURL = encodeURIComponent(redirectUrl);
 
 const urls = [
-  { url: `https://c212.net/c/link/?u=${redirectUrl}`},
+  { url: `https://bhpz.adj.st/?adjust_redirect=${encodedURL}` },
+  { url: `https://app.adjust.com/jsr?url=${encodedURL}` },
+  { url: `https://c212.net/c/link/?u=${redirectUrl}` },
   // curseforge double URI encodes
   { url: `https://wow.curseforge.com/linkout?remoteUrl=${encodeURIComponent(redirectUrl)}` },
   { url: `https://clickserve.dartsearch.net/link/click?ds_dest_url=${encodedURL}` },
   { url: 'https://github-redirect.dependabot.com/bjornstar/intercept-redirect', redirectUrl: 'https://github.com/bjornstar/intercept-redirect' },
   { url: `https://bjornstar.digidip.net/visit?url=${redirectUrl}` },
   { url: `https://disq.us/url?url=${redirectUrl}%3AzjHJ9CS7YTS6D6-FWtZRTF8swk4` },
-  { url: `https://cj.dotomi.com/links-t/8961927/type/dlg/sid/wtbs_61d0bb4f5c0a800d5c6d18c7/${redirectUrl}`},
+  { url: `https://cj.dotomi.com/links-t/8961927/type/dlg/sid/wtbs_61d0bb4f5c0a800d5c6d18c7/${redirectUrl}` },
   { url: `https://console.ebsta.com/linktracking/track.aspx?linkuri=${encodedURL}` },
-  { url: `https://redirect.epicgames.com/en/?redirectTo=${redirectUrl}`},
+  { url: `https://redirect.epicgames.com/en/?redirectTo=${redirectUrl}` },
   { url: `https://exit.sc/?url=${encodedURL}` },
   { url: `https://facebook.com/flx/warn/?u=${encodedURL}` },
   { url: `https://l.facebook.com/l.php?u=${encodedURL}` },
@@ -39,7 +41,7 @@ const urls = [
   { url: `https://plus.url.google.com/url?url=${encodedURL}` },
   { url: `https://www.google.com/imgres?imgrefurl=${encodedURL}` },
   { url: `https://www.google.com/imgres?imgurl=${encodedURL}` },
-  { url: `https://www.google.com/sorry/index?continue=${encodedURL}`},
+  { url: `https://www.google.com/sorry/index?continue=${encodedURL}` },
   { url: `https://www.google.com/url?q=${encodedURL}` },
   { url: `https://www.google.com/url?url=${encodedURL}` },
   { url: `https://www.google.se/imgres?imgrefurl=${encodedURL}` },
@@ -72,6 +74,7 @@ const urls = [
   // https://github.com/bjornstar/intercept-redirect/issues/12
   { url: 'https://steamcommunity.com/linkfilter/?url=bjornstar.com/intercept-redirect' },
   { url: 'https://www.tiktok.com/link/v2?aid=1988&lang=en&scene=bio_url&target=bjornstar.com%2Fintercept-redirect' },
+  { url: `https://toyhou.se/~r?q=${encodedURL}` },
   { url: `https://twitter.com/i/redirect?url=${encodedURL}` },
   { url: `https://t.umblr.com/redirect?z=${encodedURL}` },
   { url: `https://vk.com/away.php?to=${encodedURL}` },

@@ -25,6 +25,12 @@ const googlePathnames = {
 };
 
 const sites = {
+  'bhpz.adj.st': {
+    '/': searchParam('adjust_redirect')
+  },
+  'app.adjust.com': {
+    '/jsr': searchParam('url')
+  },
   // 2022-01-02 -- https://c212.net/c/link/?t=0&l=en&o=2997076-1&h=288952320&u=http%3A%2F%2Fcreatorkit.com%2Ftop-nine-best-of-2020&a=CreatorKit.com%2FTopNine
   'c212.net': {
     '/c/link': searchParam('u')
@@ -161,6 +167,9 @@ const sites = {
   // 2023-02-26 - https://www.tiktok.com/link/v2?aid=1988&lang=en&scene=bio_url&target=bjornstar.com%2Fintercept-redirect
   'www.tiktok.com': {
     '/link/v2': searchParam('target')
+  },
+  'toyhou.se': {
+    '/~r': searchParam('q')
   },
   'twitter.com': {
     '/i/redirect': searchParam('url')

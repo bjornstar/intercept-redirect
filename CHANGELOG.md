@@ -1,5 +1,12 @@
 # Intercept Redirect
 
+## v8.12.0 - 2023-06-25
+- Add `toyhou.se`
+- Add `app.adjust.com`
+- Add `bhpz.adj.st`
+- [README.md] Drop travis CI
+- [.gitignore] Remove travis CI config
+
 ## v8.11.0 - 2023-02-26
 - Add `tiktok.com`
 - [package.json] Align with add-on listing
