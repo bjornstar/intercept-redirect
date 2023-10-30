@@ -2,6 +2,7 @@
 
 [![Intercept Redirect Logo](https://raw.githubusercontent.com/bjornstar/intercept-redirect/master/assets/icon-300.png)](https://intercept-redirect.bjornstar.com)
 
+[![Github Badge](https://github.com/bjornstar/intercept-redirect/actions/workflows/nodejs.yml/badge.svg?branch=master)](https://github.com/bjornstar/intercept-redirect/actions/workflows/nodejs.yml)
 [![Appveyor](https://ci.appveyor.com/api/projects/status/9qrj76bt914531gg/branch/master?svg=true)](https://ci.appveyor.com/project/bjornstar/intercept-redirect/branch/master)
 [![CircleCI](https://circleci.com/gh/bjornstar/intercept-redirect/tree/master.svg?style=svg)](https://circleci.com/gh/bjornstar/intercept-redirect/tree/master)
 
@@ -15,6 +16,7 @@ This extension does not modify any of the pages that you visit. Its sole purpose
 ## Supported Domains
 - bhpz.adj.st
 - app.adjust.com
+- edgeservices.bing.com
 - c212.net
 - *.curseforge.com
 - clickserve.dartsearch.net

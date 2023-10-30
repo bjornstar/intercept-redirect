@@ -17,6 +17,7 @@ const encodedURL = encodeURIComponent(redirectUrl);
 const urls = [
   { url: `https://bhpz.adj.st/?adjust_redirect=${encodedURL}` },
   { url: `https://app.adjust.com/jsr?url=${encodedURL}` },
+  { url: `https://edgeservices.bing.com/edgesvc/redirect?url=${encodedURL}`},
   { url: `https://c212.net/c/link/?u=${redirectUrl}` },
   // curseforge double URI encodes
   { url: `https://wow.curseforge.com/linkout?remoteUrl=${encodeURIComponent(redirectUrl)}` },

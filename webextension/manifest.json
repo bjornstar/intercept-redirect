@@ -18,6 +18,7 @@
     "webRequestBlocking",
     "*://bhpz.adj.st/",
     "*://app.adjust.com/jsr",
+    "*://edgeservices.bing.com/edgesvc/redirect",
     "*://c212.net/c/link",
     "*://*.curseforge.com/linkout",
     "*://clickserve.dartsearch.net/link/click",
@@ -70,5 +71,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.12.0"
+  "version": "8.13.0"
 }
