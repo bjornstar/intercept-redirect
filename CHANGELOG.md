@@ -1,5 +1,10 @@
 # Intercept Redirect
 
+## v8.13.0 - 2023-10-30
+- Add `edgeservices.bing.com`
+- [README.md] Add github actions badge
+- [devDependencies] Update `addons-linter` and `eslint`
+
 ## v8.12.0 - 2023-06-25
 - Add `toyhou.se`
 - Add `app.adjust.com`

@@ -31,6 +31,10 @@ const sites = {
   'app.adjust.com': {
     '/jsr': searchParam('url')
   },
+  // 2023-10-30 - https://edgeservices.bing.com/edgesvc/redirect?url=https%3A%2F%2Fwww.immigration.gov.tw%2F5475%2F5478%2F141465%2F141469%2F
+  'edgeservices.bing.com': {
+    '/edgesvc/redirect': searchParam('url')
+  },
   // 2022-01-02 -- https://c212.net/c/link/?t=0&l=en&o=2997076-1&h=288952320&u=http%3A%2F%2Fcreatorkit.com%2Ftop-nine-best-of-2020&a=CreatorKit.com%2FTopNine
   'c212.net': {
     '/c/link': searchParam('u')
