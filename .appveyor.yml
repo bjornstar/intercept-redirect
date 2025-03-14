@@ -1,8 +1,7 @@
 build: off
 
 environment:
-  matrix:
-    - nodejs_version: '18'
+  nodejs_version: '24'
 
 install:
   - ps: Install-Product node $env:nodejs_version

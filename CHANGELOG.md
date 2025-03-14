@@ -6,8 +6,9 @@
 - [devDependencies] Update `addons-linter`, `eslint`, & `mocha`
 - [README.md] Add Edge version badge
 - [.npmrc] Disable audit, funding, and package-lock
-- [.github/workflows] Use node v24
+- [.github/workflows] Use node version `lts/*`
 - [.github/workflows] Update actions versions
+- [.appveyor] Use node v24
 
 ## v8.13.0 - 2023-10-30
 - Add `edgeservices.bing.com`
