@@ -6,6 +6,7 @@
   "devDependencies": {
     "addons-linter": "^7.8.0",
     "eslint": "^9.22.0",
+    "eslint-formatter-junit": "^8.40.0",
     "mocha": "^11.1.0"
   },
   "scripts": {

@@ -4,6 +4,7 @@
 - Remove support for `/sorry` from `google.come`
 - Support `u` parameter on `steampowered.com` (Fixes #62)
 - [devDependencies] Update `addons-linter`, `eslint`, & `mocha`
+- [.circleci] Add `eslint-formatter-junit` as a dev dependency for test output in xml
 - [README.md] Add Edge version badge
 - [.npmrc] Disable audit, funding, and package-lock
 - [.github/workflows] Use node version `lts/*`
