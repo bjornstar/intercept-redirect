@@ -42,7 +42,6 @@ const urls = [
   { url: `https://plus.url.google.com/url?url=${encodedURL}` },
   { url: `https://www.google.com/imgres?imgrefurl=${encodedURL}` },
   { url: `https://www.google.com/imgres?imgurl=${encodedURL}` },
-  { url: `https://www.google.com/sorry/index?continue=${encodedURL}` },
   { url: `https://www.google.com/url?q=${encodedURL}` },
   { url: `https://www.google.com/url?url=${encodedURL}` },
   { url: `https://www.google.se/imgres?imgrefurl=${encodedURL}` },
@@ -74,6 +73,8 @@ const urls = [
   { url: `https://steamcommunity.com/linkfilter/?url=${encodedURL}` },
   // https://github.com/bjornstar/intercept-redirect/issues/12
   { url: 'https://steamcommunity.com/linkfilter/?url=bjornstar.com/intercept-redirect' },
+  // https://github.com/bjornstar/intercept-redirect/issue/62
+  { url: `https://steamcommunity.com/linkfilter/?u=${encodedURL}` },
   { url: 'https://www.tiktok.com/link/v2?aid=1988&lang=en&scene=bio_url&target=bjornstar.com%2Fintercept-redirect' },
   { url: `https://toyhou.se/~r?q=${encodedURL}` },
   { url: `https://twitter.com/i/redirect?url=${encodedURL}` },

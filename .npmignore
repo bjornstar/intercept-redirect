@@ -1,6 +1,6 @@
-.appveyor.yml
 .circleci
 .eslintrc.json
 .github
+appveyor.yml
 assets
 build
