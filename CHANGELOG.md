@@ -10,6 +10,7 @@
 - [.github/workflows] Use node version `lts/*`
 - [.github/workflows] Update actions versions
 - [.appveyor] Use node v24
+- [appveyor] Rename from `.appveyor.yml` to `appveyor.yml`
 
 ## v8.13.0 - 2023-10-30
 - Add `edgeservices.bing.com`
