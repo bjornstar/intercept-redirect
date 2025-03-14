@@ -4,13 +4,12 @@
 - Remove support for `/sorry` from `google.come`
 - Support `u` parameter on `steampowered.com` (Fixes #62)
 - [devDependencies] Update `addons-linter`, `eslint`, & `mocha`
-- [.circleci] Add `eslint-formatter-junit` as a dev dependency for test output in xml
 - [README.md] Add Edge version badge
-- [.npmrc] Disable audit, funding, and package-lock
+- [.npmrc] Disable audit, funding, package-lock, and scripts
 - [.github/workflows] Use node version `lts/*`
 - [.github/workflows] Update actions versions
-- [.appveyor] Use node v24
-- [appveyor] Rename from `.appveyor.yml` to `appveyor.yml`
+- [circleci] Remove circleci
+- [appveyor] Remove appveyor
 
 ## v8.13.0 - 2023-10-30
 - Add `edgeservices.bing.com`
