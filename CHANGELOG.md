@@ -1,5 +1,14 @@
 # Intercept Redirect
 
+## v8.14.0 - 2025-03-13
+- Remove support for `/sorry` from `google.come`
+- Support `u` parameter on `steampowered.com` (Fixes #62)
+- [devDependencies] Update `addons-linter`, `eslint`, & `mocha`
+- [README.md] Add Edge version badge
+- [.npmrc] Disable audit, funding, and package-lock
+- [.github/workflows] Use node v24
+- [.github/workflows] Update actions versions
+
 ## v8.13.0 - 2023-10-30
 - Add `edgeservices.bing.com`
 - [README.md] Add github actions badge

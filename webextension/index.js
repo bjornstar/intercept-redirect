@@ -101,8 +101,6 @@ const sites = {
   },
   'www.google.com': {
     ...googlePathnames,
-    // 2021-11-01 -- https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DrOJ1cw6mohw&q=EgQNMPtfGMiMgIwGBhCGR-B7SS2l0Xark5Tx3zEkMgFy
-    '/sorry/index': searchParam('continue'),
   },
   'www.google.se': googlePathnames,
   //https://www.googleadservices.com/pagead/aclk?adurl=https://www.qoo10.jp/gmkt.inc/goods/goods.aspx%3Fgoodscode%3D765396631%26jaehuid%3D2026058773
@@ -166,7 +164,7 @@ const sites = {
     '/link': searchParam('url')
   },
   'steamcommunity.com': {
-    '/linkfilter/': searchParam('url')
+    '/linkfilter/': ({ searchParams }) => find(['u','url'], searchParams.get.bind(searchParams))
   },
   // 2023-02-26 - https://www.tiktok.com/link/v2?aid=1988&lang=en&scene=bio_url&target=bjornstar.com%2Fintercept-redirect
   'www.tiktok.com': {
