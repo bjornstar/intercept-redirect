@@ -3,8 +3,6 @@
 [![Intercept Redirect Logo](https://raw.githubusercontent.com/bjornstar/intercept-redirect/master/assets/icon-300.png)](https://intercept-redirect.bjornstar.com)
 
 [![Github Badge](https://github.com/bjornstar/intercept-redirect/actions/workflows/nodejs.yml/badge.svg?branch=master)](https://github.com/bjornstar/intercept-redirect/actions/workflows/nodejs.yml)
-[![Appveyor](https://ci.appveyor.com/api/projects/status/9qrj76bt914531gg/branch/master?svg=true)](https://ci.appveyor.com/project/bjornstar/intercept-redirect/branch/master)
-[![CircleCI](https://circleci.com/gh/bjornstar/intercept-redirect/tree/master.svg?style=svg)](https://circleci.com/gh/bjornstar/intercept-redirect/tree/master)
 
 [![AMO Badge](https://img.shields.io/amo/v/intercept-redirect)](https://intercept-redirect.firefox.bjornstar.com)
 [![Edge Badge](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fdetail%2Fintercept-redirect%2Flcepiodcdgkegeepkekedmelbcfeijni)](https://intercept-redirect.edge.bjornstar.com)
