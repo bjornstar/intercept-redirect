@@ -1,10 +1,7 @@
-// URL polyfill
-const URL = typeof window === 'object' ? window.URL : require('url').URL;
-
 const matchPatternToRegex = mp => `^${mp.replace(/\./, '\\.').replace(/\*/, '.*')}`;
 
-const ensureProtocol = s => {
-  const prepend = /^.*:\/\//.test(s) ? '' : 'https://';
+const ensureProtocol = (s = '') => {
+  const prepend = (!s || /^.*:\/\//.test(s)) ? '' : 'https://';
   return `${prepend}${s}`;
 };
 
@@ -233,13 +230,11 @@ function analyzeURL(request) {
 
   const site = sites[host];
 
-  if (!site) {
-    return;
-  }
+  if (!site) return;
 
-  const redirectUrl = find(redirectExtractors[host], url);
+  const redirected = ensureProtocol(find(redirectExtractors[host], url));
 
-  return redirectUrl && { redirectUrl: ensureProtocol(redirectUrl) };
+  return redirected ? analyzeURL({ url: redirected }) || { redirectUrl: redirected } : undefined;
 }
 
 // Only runs in the browser

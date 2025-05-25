@@ -39,7 +39,6 @@
     "*://news.url.google.com/url",
     "*://plus.url.google.com/url",
     "*://www.google.com/imgres",
-    "*://www.google.com/sorry/index",
     "*://www.google.com/url",
     "*://www.google.se/imgres",
     "*://www.google.se/url",
@@ -71,5 +70,5 @@
     "*://workable.com/nr",
     "*://www.youtube.com/redirect"
   ],
-  "version": "8.14.0"
+  "version": "8.15.0"
 }

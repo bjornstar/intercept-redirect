@@ -1,7 +1,14 @@
 # Intercept Redirect
 
+## v8.15.0 - 2025-05-25
+- Handle nested redirects (Fixes #64)
+- [manifest.json] Remove unused `google.com/sorry` permission
+- [README.md] Fix `shields.io` badge for Edge addon version
+- [devDependencies] Update `addons-linter`, `eslint`, & `mocha`
+- [tests] Ensure every permissions entry in the manifest has a test
+
 ## v8.14.0 - 2025-03-13
-- Remove support for `/sorry` from `google.come`
+- Remove support for `/sorry` from `google.com`
 - Support `u` parameter on `steampowered.com` (Fixes #62)
 - [devDependencies] Update `addons-linter`, `eslint`, & `mocha`
 - [README.md] Add Edge version badge

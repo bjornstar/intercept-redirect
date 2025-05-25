@@ -1,8 +1,8 @@
-const assert = require('assert');
-const fs = require('fs');
+const assert = require('node:assert');
+const fs = require('node:fs');
+const path = require('node:path');
+
 const mocha = require('mocha');
-const path = require('path');
-const { URL } = require('url');
 
 const webExtension = require('../webextension');
 const manifest = require('../webextension/manifest.json');
@@ -31,6 +31,8 @@ const urls = [
   { url: `https://exit.sc/?url=${encodedURL}` },
   { url: `https://facebook.com/flx/warn/?u=${encodedURL}` },
   { url: `https://l.facebook.com/l.php?u=${encodedURL}` },
+  // https://github.com/bjornstar/intercept-redirect/issues/64 -- Nested Redirects
+  { url: `https://l.facebook.com/l.php?u=${encodeURIComponent(`https://www.google.com/url?q=${encodedURL}`)}` },
   { url: `https://lm.facebook.com/l.php?u=${encodedURL}` },
   { url: `https://m.facebook.com/flx/warn/?u=${encodedURL}` },
   { url: `https://gate.sc/?url=${encodedURL}` },
@@ -84,14 +86,17 @@ const urls = [
   { url: `https://www.youtube.com/redirect?q=${encodedURL}` }
 ];
 
-const manifestSites = manifest.permissions.filter(permission => {
+const manifestPermissions = manifest.permissions.filter(permission => {
   return permission !== 'webRequest' && permission !== 'webRequestBlocking';
-}).map(site => new URL(site.replace(/^\*:\/\//, 'https://')).host);
+});
 
 const testSites = urls.map(({ url }) => {
   const host = url.substring(8, url.indexOf('/', 8));
   return subdomain(host);
 });
+
+const testUrls = urls.map(({ url }) => url);
+const manifestSites = manifestPermissions.map(permission => new URL(permission.replace(/^\*:\/\//, 'https://')).host);
 
 const webExtensionSites = Object.keys(webExtension.sites);
 
@@ -143,6 +148,15 @@ describe('Packaging', () => {
     manifestSites.forEach(site => {
       it(`site: ${site}`, () => {
         assert.ok(testSites.includes(site), `Missing tests: ${site}`);
+      });
+    });
+  });
+
+  describe('Every url in the manifest permissions has a test', () => {
+    manifestPermissions.forEach((permission) => {
+      const matcher = new RegExp(permission.replaceAll('*', '[^\\s]*?'));
+      it(`permission: ${permission}`, () => {
+        assert.ok(testUrls.find(url => matcher.test(url)), `Missing tests: ${permission}`);
       });
     });
   });
@@ -203,7 +217,7 @@ describe('Packaging', () => {
   });
 });
 
-describe('Subdomain', () => {
+describe('Subdomains', () => {
   it('For supported domains returns *.domain', () => {
     assert.strictEqual(subdomain('wow.curseforge.com'), '*.curseforge.com');
     assert.strictEqual(subdomain('foobar.digidip.net'), '*.digidip.net');
