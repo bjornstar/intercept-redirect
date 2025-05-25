@@ -5,7 +5,7 @@
 [![Github Badge](https://github.com/bjornstar/intercept-redirect/actions/workflows/nodejs.yml/badge.svg?branch=master)](https://github.com/bjornstar/intercept-redirect/actions/workflows/nodejs.yml)
 
 [![AMO Badge](https://img.shields.io/amo/v/intercept-redirect)](https://intercept-redirect.firefox.bjornstar.com)
-[![Edge Badge](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fdetail%2Fintercept-redirect%2Flcepiodcdgkegeepkekedmelbcfeijni)](https://intercept-redirect.edge.bjornstar.com)
+[![Edge Badge](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Flcepiodcdgkegeepkekedmelbcfeijni)](https://intercept-redirect.edge.bjornstar.com)
 [![CWS Badge](https://img.shields.io/chrome-web-store/v/kdjmiebhgaleboaamnehjbamlghkoedf)](https://intercept-redirect.chrome.bjornstar.com)
 
 Skip tracking redirects that serve no purpose other than to waste your valuable time.
